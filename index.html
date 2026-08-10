@@ -3,13 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cờ Vua — game cờ vua tiếng Việt, chơi ngoại tuyến</title>
-<meta name="description" content="Game cờ vua viết bằng Flutter: luật FIDE đầy đủ, máy đấu 8 mức, 4 chủ đề bàn cờ × 6 bộ quân, chơi hoàn toàn ngoại tuyến. Tải APK cho Android hoặc chơi trên Windows.">
-<meta property="og:title" content="Cờ Vua — game cờ vua tiếng Việt">
-<meta property="og:description" content="Luật FIDE đầy đủ, máy đấu 8 mức, chơi hoàn toàn ngoại tuyến. Mã nguồn mở.">
-<meta property="og:image" content="https://mittohoa.github.io/chess-game-web/anh/anh-app.png">
+<title>TỐT thí — cờ vua tiếng Việt, chơi ngoại tuyến</title>
+<meta name="description" content="TỐT thí: game cờ vua tiếng Việt. Luật FIDE đầy đủ, máy đấu 8 mức, 3000 bài tập chiến thuật, 24 kết hợp giao diện. Chơi hoàn toàn ngoại tuyến, không quảng cáo.">
+<meta property="og:title" content="TỐT thí — cờ vua tiếng Việt">
+<meta property="og:description" content="Luật FIDE đầy đủ, máy đấu 8 mức, 3000 bài tập. Chơi ngoại tuyến, không tài khoản, không quảng cáo.">
+<meta property="og:image" content="https://mittohoa.github.io/chess-game-web/anh/logo.png">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♞</text></svg>">
+<meta name="theme-color" content="#8B5A2B">
+<link rel="icon" href="anh/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="anh/logo.png">
 <style>
   :root {
     --bg: #faf7f2;
@@ -33,6 +35,8 @@
       --line: #322c25;
       --accent: #d8a76a;
       --accent-soft: #3a2f22;
+      --ok: #79b479;
+      --warn: #d6a05a;
     }
   }
   * { box-sizing: border-box; }
@@ -47,36 +51,28 @@
   .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
   a { color: var(--accent); }
 
-  /* ── Thanh trên cùng ─────────────────────────────────── */
   header {
     position: sticky; top: 0; z-index: 10;
     background: color-mix(in srgb, var(--bg) 88%, transparent);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--line);
   }
-  header .wrap {
-    display: flex; align-items: center; gap: 16px;
-    height: 60px;
-  }
-  .brand { font-weight: 700; font-size: 18px; display: flex; align-items: center; gap: 8px; }
-  .brand span.mark {
-    width: 26px; height: 26px; border-radius: 6px;
-    background:
-      linear-gradient(135deg, var(--accent-soft) 50%, var(--dark-square) 50%);
-    display: inline-block;
-  }
+  header .wrap { display: flex; align-items: center; gap: 16px; height: 62px; }
+  .brand { font-size: 18px; display: flex; align-items: center; gap: 10px; }
+  .brand img { width: 30px; height: 30px; border-radius: 7px; display: block; }
+  .brand b { font-weight: 800; letter-spacing: .5px; }
+  .brand span { font-weight: 300; }
   nav { margin-left: auto; display: flex; gap: 18px; flex-wrap: wrap; }
   nav a { color: var(--muted); text-decoration: none; font-size: 14px; }
   nav a:hover { color: var(--ink); }
-  @media (max-width: 720px) { nav { display: none; } }
+  @media (max-width: 780px) { nav { display: none; } }
 
-  /* ── Phần mở đầu ─────────────────────────────────────── */
   .hero { padding: 56px 0 40px; }
   .hero .wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; }
-  @media (max-width: 860px) {
-    .hero .wrap { grid-template-columns: 1fr; gap: 32px; }
-  }
-  h1 { font-size: clamp(30px, 5vw, 44px); line-height: 1.15; margin: 0 0 14px; letter-spacing: -0.02em; }
+  @media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; gap: 32px; } }
+  h1 { font-size: clamp(30px, 5vw, 46px); line-height: 1.12; margin: 0 0 14px; letter-spacing: -0.02em; }
+  h1 .name b { font-weight: 800; }
+  h1 .name span { font-weight: 300; color: var(--accent); }
   .lede { font-size: 18px; color: var(--muted); margin: 0 0 26px; }
   .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 26px; }
   .badge {
@@ -92,19 +88,15 @@
   .btn-primary { background: var(--accent); color: #fff; }
   .btn-primary:hover { filter: brightness(1.08); }
   .btn-ghost { background: var(--surface); border-color: var(--line); color: var(--ink); }
-  .btn-note { font-size: 13px; color: var(--muted); }
+  .btn-note { font-size: 13px; color: var(--muted); margin-top: 14px; }
 
-  .shot {
-    margin: 0; display: flex; justify-content: center;
-  }
+  .shot { margin: 0; display: flex; justify-content: center; }
   .shot img {
-    width: 100%; max-width: 330px; height: auto;
-    border-radius: 26px;
-    border: 1px solid var(--line);
+    width: 100%; max-width: 320px; height: auto;
+    border-radius: 24px; border: 1px solid var(--line);
     box-shadow: 0 22px 50px rgba(0,0,0,.16);
   }
 
-  /* ── Khối chung ──────────────────────────────────────── */
   section { padding: 48px 0; border-top: 1px solid var(--line); }
   h2 { font-size: 26px; margin: 0 0 8px; letter-spacing: -0.01em; }
   .sub { color: var(--muted); margin: 0 0 28px; }
@@ -129,7 +121,6 @@
   }
   figcaption { color: var(--muted); font-size: 13.5px; margin-top: 10px; }
 
-  /* ── Bảng thiết bị ───────────────────────────────────── */
   .table-scroll { overflow-x: auto; }
   table { border-collapse: collapse; width: 100%; font-size: 14.5px; min-width: 620px; }
   th, td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--line); }
@@ -138,12 +129,8 @@
   td.n { color: var(--muted); }
   td.p { color: var(--warn); font-weight: 600; }
 
-  /* ── Hướng dẫn nhanh ─────────────────────────────────── */
   ol.steps { counter-reset: s; list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
-  ol.steps li {
-    counter-increment: s; position: relative; padding-left: 46px;
-    color: var(--muted);
-  }
+  ol.steps li { counter-increment: s; position: relative; padding-left: 46px; color: var(--muted); }
   ol.steps li::before {
     content: counter(s);
     position: absolute; left: 0; top: -1px;
@@ -153,7 +140,6 @@
   }
   ol.steps b { color: var(--ink); }
 
-  /* ── Câu hỏi ─────────────────────────────────────────── */
   details {
     background: var(--surface); border: 1px solid var(--line);
     border-radius: var(--radius); padding: 14px 18px; margin-bottom: 10px;
@@ -170,10 +156,7 @@
   }
   .callout strong { color: var(--ink); }
 
-  footer {
-    border-top: 1px solid var(--line); padding: 34px 0 50px;
-    color: var(--muted); font-size: 14px;
-  }
+  footer { border-top: 1px solid var(--line); padding: 34px 0 50px; color: var(--muted); font-size: 14px; }
   footer .wrap { display: flex; flex-wrap: wrap; gap: 18px; justify-content: space-between; }
   footer a { color: var(--muted); }
 </style>
@@ -182,14 +165,18 @@
 
 <header>
   <div class="wrap">
-    <div class="brand"><span class="mark"></span> Cờ Vua</div>
+    <div class="brand">
+      <img src="anh/logo.png" alt="">
+      <span><b>TỐT</b> <span>thí</span></span>
+    </div>
     <nav>
       <a href="#tinh-nang">Tính năng</a>
+      <a href="#bai-tap">Bài tập</a>
+      <a href="#giao-dien">Giao diện</a>
       <a href="#thiet-bi">Thiết bị</a>
       <a href="#huong-dan">Hướng dẫn</a>
       <a href="#hoi-dap">Hỏi đáp</a>
       <a href="#rieng-tu">Riêng tư</a>
-      <a href="#giay-phep">Giấy phép</a>
     </nav>
   </div>
 </header>
@@ -197,28 +184,25 @@
 <div class="hero">
   <div class="wrap">
     <div>
-      <h1>Cờ vua tiếng Việt,<br>chơi không cần mạng</h1>
+      <h1><span class="name"><b>TỐT</b> <span>thí</span></span><br>cờ vua tiếng Việt,<br>chơi không cần mạng</h1>
       <p class="lede">
-        Luật FIDE đầy đủ, máy đấu tám mức, giao diện tối giản không quảng cáo.
-        Không tài khoản, không thu thập dữ liệu — mở lên là chơi.
+        Luật FIDE đầy đủ, máy đấu tám mức, 3000 bài tập chiến thuật.
+        Không tài khoản, không quảng cáo, không thu thập dữ liệu — mở lên là chơi.
       </p>
       <div class="badges">
-        <span class="badge">Phiên bản 0.3 · beta</span>
+        <span class="badge">Phiên bản 0.4 · beta</span>
         <span class="badge">Không quảng cáo</span>
         <span class="badge">Không cần tài khoản</span>
-        <span class="badge">Mã nguồn mở</span>
+        <span class="badge">Không xin quyền nào</span>
       </div>
       <div class="cta">
-        <a class="btn btn-primary" href="https://github.com/mittohoa/chess-game/releases/latest">
+        <a class="btn btn-primary" href="https://github.com/mittohoa/chess-game-web/releases/latest">
           ⬇ Tải APK cho Android
         </a>
-        <a class="btn btn-ghost" href="https://github.com/mittohoa/chess-game">
-          Xem mã nguồn
-        </a>
+        <a class="btn btn-ghost" href="#huong-dan">Cách cài đặt</a>
       </div>
       <p class="btn-note">
         Chưa có trên Google Play — bản beta phát hành bằng tệp APK.
-        Xem <a href="#huong-dan">hướng dẫn cài đặt</a>.
       </p>
     </div>
     <figure class="shot">
@@ -229,69 +213,94 @@
 
 <section id="tinh-nang">
   <div class="wrap">
-    <h2>Tính năng nổi bật</h2>
-    <p class="sub">Bốn thứ làm nên khác biệt của app này.</p>
+    <h2>Bốn thứ làm nên khác biệt</h2>
+    <p class="sub">Không phải app cờ vua nào cũng có.</p>
     <div class="grid cols-2">
       <div class="card">
         <span class="icon">🤖</span>
-        <h3>Máy đấu tám mức</h3>
+        <h3>Máy đấu tám mức, chơi như người</h3>
         <p>
-          Từ “Mới học” tới “Tối đa”. Các mức thấp không chỉ nghĩ ít hơn mà còn
-          <em>nhìn nhầm thế cờ</em> — nên chơi với chúng giống chơi với người mới,
-          chứ không phải với một cỗ máy bị bóp cổ.
+          Các mức thấp không chỉ nghĩ ít hơn mà còn <em>nhìn nhầm thế cờ</em> —
+          nên chơi với chúng giống chơi với người mới, chứ không phải với một cỗ
+          máy bị bóp cổ. Đó là khác biệt bạn cảm nhận được ngay từ ván đầu.
         </p>
       </div>
       <div class="card">
-        <span class="icon">♟</span>
-        <h3>24 kết hợp giao diện</h3>
+        <span class="icon">🎯</span>
+        <h3>3000 bài tập có Elo riêng</h3>
         <p>
-          Bốn chủ đề bàn cờ nhân sáu bộ quân. Trong đó có bộ <b>“Nước đi”</b> —
-          hình quân chính là cách nó di chuyển — và bộ <b>“Trống đồng”</b> lấy
-          hoa văn Đông Sơn.
+          Lấy từ kho mở của Lichess, chia đều sáu mức từ rất dễ tới rất khó.
+          App theo dõi điểm của bạn và luôn đưa bài vừa sức — giải đúng thì bài
+          khó dần lên.
         </p>
       </div>
       <div class="card">
         <span class="icon">📴</span>
         <h3>Hoàn toàn ngoại tuyến</h3>
         <p>
-          Không đăng nhập, không gửi gì lên mạng, không quảng cáo. Ván đang chơi
-          được lưu lại: thoát app rồi mở lên vẫn đúng chỗ cũ, kể cả đồng hồ.
+          Không đăng nhập, không gửi gì lên mạng, không quảng cáo, không xin
+          quyền nào. Ván đang chơi tự lưu: thoát app rồi mở lên vẫn đúng chỗ cũ,
+          kể cả đồng hồ.
         </p>
       </div>
       <div class="card">
         <span class="icon">⚖️</span>
         <h3>Luật cờ đúng chuẩn</h3>
         <p>
-          Nhập thành, bắt tốt qua đường, phong cấp, chiếu hết, pat, luật 50 nước,
-          lặp thế ba lần, thiếu quân chiếu hết. Bộ sinh nước đi đối chiếu với số
-          liệu <em>perft</em> chuẩn của cộng đồng cờ vua.
+          Nhập thành, bắt tốt qua đường, phong cấp, chiếu hết, pat, luật 50
+          nước, lặp thế ba lần. Bộ sinh nước đi được đối chiếu với số liệu
+          <em>perft</em> chuẩn của cộng đồng cờ vua.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<section>
+<section id="bai-tap">
   <div class="wrap">
-    <h2>Chọn bộ quân theo ý bạn</h2>
-    <p class="sub">Sáu bộ, đều vẽ bằng vector nên sắc nét ở mọi kích thước.</p>
-    <figure>
-      <img src="anh/bo-quan.png" alt="Sáu bộ quân: Cổ điển, Nét mảnh, Khối đặc, Nước đi, Chữ Việt, Trống đồng">
-      <figcaption>
-        Bộ <b>Nước đi</b>: tốt là mũi tên tiến, xe là dấu cộng, tượng là dấu nhân,
-        hậu là cả hai, mã là chữ L, vua là một bước ra tám hướng — nhìn quân là
-        biết nó đi kiểu gì. Bộ <b>Chữ Việt</b> dùng chữ đầu tên quân: V H X T M.
-      </figcaption>
-    </figure>
+    <h2>Luyện chiến thuật mỗi ngày</h2>
+    <p class="sub">
+      Bài nào cũng lấy từ ván đấu thật và có một lời giải rõ ràng.
+    </p>
+    <div class="grid cols-2">
+      <figure>
+        <img src="anh/man-hinh-puzzle.png" alt="Màn hình bài tập: bàn cờ, dòng nhắc tìm nước tốt nhất, và báo sai khi đi nhầm">
+      </figure>
+      <div>
+        <div class="card" style="margin-bottom:14px">
+          <h3>Điểm Elo riêng cho bài tập</h3>
+          <p>Bắt đầu ở 1200. Giải đúng ngay thì lên điểm nhiều hơn; phải nhờ gợi ý thì chỉ tính như hoà.</p>
+        </div>
+        <div class="card" style="margin-bottom:14px">
+          <h3>Không bắt bí</h3>
+          <p>Đi sai thì báo sai và cho thử lại, không mất bài. Bí quá có nút gợi ý chỉ đúng nước.</p>
+        </div>
+        <div class="card">
+          <h3>Sáu mức độ, chia đều</h3>
+          <p>500 bài mỗi mức, từ rất dễ tới rất khó — người mới học và người chơi lâu năm đều có bài vừa sức.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section>
+<section id="giao-dien">
   <div class="wrap">
-    <h2>Bốn chủ đề bàn cờ</h2>
-    <p class="sub">Gỗ cổ điển, Xanh biển, Xanh lá, Đêm — đổi được bất cứ lúc nào.</p>
+    <h2>24 kết hợp giao diện</h2>
+    <p class="sub">Bốn chủ đề bàn cờ nhân sáu bộ quân, đổi được bất cứ lúc nào.</p>
+    <figure>
+      <img src="anh/bo-quan.png" alt="Sáu bộ quân: Cổ điển, Nét mảnh, Khối đặc, Nước đi, Chữ Việt, Trống đồng">
+      <figcaption>
+        Bộ <b>Nước đi</b>: tốt là mũi tên tiến, xe là dấu cộng, tượng là dấu
+        nhân, hậu là cả hai, mã là chữ L, vua là một bước ra tám hướng — nhìn
+        quân là biết nó đi kiểu gì, rất hợp cho người mới học.
+        Bộ <b>Chữ Việt</b> dùng chữ đầu tên quân: V H X T M.
+      </figcaption>
+    </figure>
+    <div style="height:22px"></div>
     <figure>
       <img src="anh/bo-quan-tren-ban.png" alt="Bốn bàn cờ với bốn chủ đề màu và bốn bộ quân khác nhau">
+      <figcaption>Bốn chủ đề: Gỗ cổ điển, Xanh biển, Xanh lá, Đêm.</figcaption>
     </figure>
   </div>
 </section>
@@ -306,19 +315,15 @@
     <div class="table-scroll">
       <table>
         <thead>
-          <tr>
-            <th>Tính năng</th>
-            <th>Android</th>
-            <th>Windows</th>
-            <th>Trình duyệt</th>
-          </tr>
+          <tr><th>Tính năng</th><th>Android</th><th>Windows</th><th>Trình duyệt</th></tr>
         </thead>
         <tbody>
           <tr><td>Chơi hai người chung một máy</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
           <tr><td>Đấu với máy, 8 mức</td><td class="y">Có</td><td class="y">Có</td><td class="p">Có, mức cao yếu hơn</td></tr>
           <tr><td>Máy nghĩ nền, không đơ giao diện</td><td class="y">Có</td><td class="y">Có</td><td class="n">Không</td></tr>
+          <tr><td>3000 bài tập chiến thuật</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
           <tr><td>Đồng hồ thi đấu, 7 thể thức</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
-          <tr><td>Âm thanh và rung phản hồi</td><td class="y">Có</td><td class="p">Âm thanh</td><td class="p">Âm thanh</td></tr>
+          <tr><td>Âm thanh và rung phản hồi</td><td class="y">Có</td><td class="p">Chỉ âm thanh</td><td class="p">Chỉ âm thanh</td></tr>
           <tr><td>Lưu ván đang chơi</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
           <tr><td>Xuất / nhập PGN, FEN</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
           <tr><td>Bản phát hành sẵn có</td><td class="y">APK</td><td class="p">Tự dựng</td><td class="p">Tự dựng</td></tr>
@@ -342,7 +347,7 @@
         <h3 style="font-size:17px;margin:0 0 14px">Cài trên Android</h3>
         <ol class="steps">
           <li>Tải tệp <b>APK</b> từ nút ở đầu trang.</li>
-          <li>Mở tệp vừa tải. Android sẽ hỏi có cho phép cài từ nguồn này không — chọn <b>Cho phép</b>, đây là bước bắt buộc với mọi app chưa lên Google Play.</li>
+          <li>Mở tệp vừa tải. Android sẽ hỏi có cho phép cài từ nguồn này không — chọn <b>Cho phép</b>. Đây là bước bắt buộc với mọi app chưa lên Google Play, không riêng app này.</li>
           <li>Nhấn <b>Cài đặt</b>, rồi <b>Mở</b>.</li>
         </ol>
       </div>
@@ -370,16 +375,20 @@
     <p class="sub">Những thắc mắc hay gặp nhất.</p>
 
     <details>
+      <summary>Vì sao tên app là "TỐT thí"?</summary>
+      <p>Thí tốt là đòn quen thuộc trong cờ vua: cho đi một con tốt để đổi lấy thế trận. Tên vừa là thuật ngữ cờ vua, vừa nhắc rằng quân nhỏ nhất cũng có thể quyết định cả ván.</p>
+    </details>
+    <details>
       <summary>App có cần mạng không?</summary>
-      <p>Không. Mọi thứ chạy trên máy bạn, kể cả máy đấu. App không gửi bất cứ dữ liệu nào ra ngoài.</p>
+      <p>Không. Mọi thứ chạy trên máy bạn, kể cả máy đấu và kho bài tập. App không gửi bất cứ dữ liệu nào ra ngoài.</p>
     </details>
     <details>
       <summary>Vì sao Android cảnh báo khi cài?</summary>
-      <p>Vì app chưa phát hành qua Google Play. Android cảnh báo với mọi tệp APK cài ngoài cửa hàng, không phải riêng app này. Mã nguồn công khai nên bạn có thể tự kiểm tra hoặc tự dựng bản của mình.</p>
+      <p>Vì app chưa phát hành qua Google Play. Android cảnh báo với mọi tệp APK cài ngoài cửa hàng, không phải riêng app này.</p>
     </details>
     <details>
       <summary>App xin những quyền gì?</summary>
-      <p>Hiện tại không quyền nào. App không truy cập mạng, danh bạ, vị trí, máy ảnh hay bộ nhớ ngoài.</p>
+      <p>Không quyền nào. App không truy cập mạng, danh bạ, vị trí, máy ảnh hay bộ nhớ ngoài.</p>
     </details>
     <details>
       <summary>Máy đấu mạnh cỡ nào?</summary>
@@ -390,12 +399,16 @@
       <p>Đó là cố ý. Các mức thấp được thêm sai số vào cách đánh giá thế cờ, nên chúng <em>nhìn nhầm</em> giống người mới chơi. Nếu chỉ giảm thời gian nghĩ, máy sẽ vẫn hiểu thế cờ ở trình độ rất cao mà chỉ yếu về tính toán — đánh với nó không có cảm giác tự nhiên.</p>
     </details>
     <details>
+      <summary>Bài tập lấy từ đâu?</summary>
+      <p>Từ kho bài tập mở của Lichess, phát hành theo giấy phép CC0. Mỗi bài là một thế cờ có thật từ ván đấu online, đã được hàng nghìn người giải và bình chọn.</p>
+    </details>
+    <details>
       <summary>Có lưu được ván đang chơi không?</summary>
       <p>Có, tự động. Thoát app giữa chừng rồi mở lại là chơi tiếp, kể cả thời gian còn lại trên đồng hồ. Bạn cũng có thể xuất ván ra PGN để mở bằng Lichess hay Chess.com.</p>
     </details>
     <details>
       <summary>Tôi gặp lỗi hoặc muốn góp ý thì báo ở đâu?</summary>
-      <p>Gửi thư tới <a href="mailto:mittohoa@gmail.com">mittohoa@gmail.com</a>, hoặc mở một issue trên <a href="https://github.com/mittohoa/chess-game/issues">GitHub</a>.</p>
+      <p>Gửi thư tới <a href="mailto:mittohoa@gmail.com">mittohoa@gmail.com</a>.</p>
     </details>
   </div>
 </section>
@@ -407,37 +420,37 @@
     <div class="callout">
       <p style="margin:0">
         <strong>App không thu thập bất kỳ dữ liệu nào của bạn.</strong>
-        Không tài khoản, không đăng nhập, không định danh thiết bị, không thống kê
-        sử dụng, không quảng cáo, không thư viện theo dõi của bên thứ ba.
+        Không tài khoản, không đăng nhập, không định danh thiết bị, không thống
+        kê sử dụng, không quảng cáo, không thư viện theo dõi của bên thứ ba.
       </p>
       <p style="margin:12px 0 0">
-        Cài đặt và ván cờ đang chơi được lưu <em>trên chính máy bạn</em> và bị xoá
-        khi bạn gỡ app. Không có máy chủ nào nhận được gì cả, vì app không kết nối
-        ra ngoài.
+        Cài đặt, ván cờ đang chơi và điểm bài tập được lưu <em>trên chính máy
+        bạn</em> và bị xoá khi bạn gỡ app. Không có máy chủ nào nhận được gì cả,
+        vì app không kết nối ra ngoài.
       </p>
       <p style="margin:12px 0 0">
-        Thắc mắc về quyền riêng tư: <a href="mailto:mittohoa@gmail.com">mittohoa@gmail.com</a>.
+        Thắc mắc: <a href="mailto:mittohoa@gmail.com">mittohoa@gmail.com</a>.
       </p>
     </div>
   </div>
 </section>
 
-<section id="giay-phep">
+<section>
   <div class="wrap">
-    <h2>Mã nguồn mở</h2>
-    <p class="sub">Toàn bộ mã nguồn công khai trên GitHub.</p>
+    <h2>Ghi công &amp; giấy phép</h2>
+    <p class="sub">App tự viết từ đầu, không dùng thư viện cờ vua nào.</p>
     <div class="grid cols-3">
       <div class="card">
-        <h3>Mã nguồn</h3>
-        <p><a href="https://github.com/mittohoa/chess-game">github.com/mittohoa/chess-game</a></p>
+        <h3>Bài tập</h3>
+        <p>Từ kho mở của <a href="https://database.lichess.org/">Lichess</a>, giấy phép CC0.</p>
       </div>
       <div class="card">
-        <h3>Không phụ thuộc thư viện cờ</h3>
-        <p>Luật cờ, bàn cờ, quân cờ, âm thanh và máy đấu đều tự viết từ đầu.</p>
+        <h3>Quân cờ và âm thanh</h3>
+        <p>Quân cờ vẽ bằng vector dựa trên mẫu Staunton. Âm thanh tổng hợp bằng chương trình, không lấy từ nguồn ngoài.</p>
       </div>
       <div class="card">
-        <h3>Ghi công</h3>
-        <p>Quân cờ dựa trên mẫu Staunton. Phông chữ Roboto do Google phát hành theo giấy phép Apache 2.0.</p>
+        <h3>Phông chữ</h3>
+        <p>Roboto, do Google phát hành theo giấy phép Apache 2.0.</p>
       </div>
     </div>
   </div>
@@ -446,13 +459,12 @@
 <footer>
   <div class="wrap">
     <div>
-      <b>Cờ Vua</b> — phiên bản 0.3 beta ·
+      <b>TỐT thí</b> — phiên bản 0.4 beta ·
       <a href="mailto:mittohoa@gmail.com">mittohoa@gmail.com</a>
     </div>
     <div>
-      <a href="https://github.com/mittohoa/chess-game">GitHub</a> ·
       <a href="#rieng-tu">Quyền riêng tư</a> ·
-      <a href="https://github.com/mittohoa/chess-game/issues">Báo lỗi</a>
+      <a href="#hoi-dap">Hỏi đáp</a>
     </div>
   </div>
 </footer>

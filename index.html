@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TỐT thí — cờ vua tiếng Việt, chơi ngoại tuyến</title>
-<meta name="description" content="TỐT thí: game cờ vua tiếng Việt. Luật FIDE đầy đủ, máy đấu 8 mức, 3000 bài tập chiến thuật, 24 kết hợp giao diện. Chơi hoàn toàn ngoại tuyến, không quảng cáo.">
+<meta name="description" content="TỐT thí: game cờ vua tiếng Việt. Bàn cờ ba chiều, luật FIDE đầy đủ, máy đấu 8 mức, 3000 bài tập chiến thuật, phân tích ván. Chơi hoàn toàn ngoại tuyến, không quảng cáo.">
 <meta property="og:title" content="TỐT thí — cờ vua tiếng Việt">
-<meta property="og:description" content="Luật FIDE đầy đủ, máy đấu 8 mức, 3000 bài tập. Chơi ngoại tuyến, không tài khoản, không quảng cáo.">
+<meta property="og:description" content="Bàn cờ ba chiều, luật FIDE đầy đủ, máy đấu 8 mức, 3000 bài tập. Chơi ngoại tuyến, không tài khoản, không quảng cáo.">
 <meta property="og:image" content="https://mittohoa.github.io/chess-game-web/anh/logo.png">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#8B5A2B">
@@ -171,6 +171,7 @@
     </div>
     <nav>
       <a href="#tinh-nang">Tính năng</a>
+      <a href="#ba-chieu">Bàn 3D</a>
       <a href="#bai-tap">Bài tập</a>
       <a href="#phan-tich">Phân tích</a>
       <a href="#ngon-ngu">Ngôn ngữ</a>
@@ -192,8 +193,9 @@
         Không tài khoản, không quảng cáo, không thu thập dữ liệu — mở lên là chơi.
       </p>
       <div class="badges">
-        <span class="badge">Phiên bản 1.1 · beta</span>
+        <span class="badge">Phiên bản 1.2 · beta</span>
         <span class="badge">Không quảng cáo</span>
+        <span class="badge">Bàn cờ 3D</span>
         <span class="badge">Tiếng Việt &amp; English</span>
         <span class="badge">Không cần tài khoản</span>
         <span class="badge">Không xin quyền truy cập</span>
@@ -205,7 +207,7 @@
         <a class="btn btn-ghost" href="#huong-dan">Cách cài đặt</a>
       </div>
       <p class="btn-note">
-        Phiên bản 1.1.0 · 22 MB · Android 5.0 trở lên ·
+        Phiên bản 1.2.0 · 22 MB · Android 5.0 trở lên ·
         chưa có trên Google Play nên phát hành bằng tệp APK.
       </p>
     </div>
@@ -257,6 +259,59 @@
         </p>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="ba-chieu">
+  <div class="wrap">
+    <h2>Bàn cờ ba chiều</h2>
+    <p class="sub">
+      Quân cờ dựng khối thật, có bóng đổ và ánh sáng. Vuốt ngang để xoay quanh bàn.
+    </p>
+    <figure>
+      <img src="anh/quan-co-3d.png" alt="Cận cảnh sáu loại quân cờ ba chiều: Tốt, Mã, Tượng, Xe, Hậu, Vua, mỗi loại một cặp trắng và đen">
+      <figcaption>Sáu loại quân, mỗi loại một cặp trắng–đen.</figcaption>
+    </figure>
+    <div class="grid cols-2" style="margin-top:18px">
+      <div class="card">
+        <span class="icon">🎲</span>
+        <h3>Tự viết, không mượn thư viện 3D nào</h3>
+        <p>
+          Cả cảnh — bàn, viền, ba mươi hai quân — gói vào <em>một lệnh vẽ duy
+          nhất</em> với màu theo từng đỉnh. Nhờ vậy bóng đổ mượt mà máy vẫn nhẹ,
+          và app không phình thêm một megabyte nào.
+        </p>
+      </div>
+      <div class="card">
+        <span class="icon">👆</span>
+        <h3>Chạm hai lần, không kéo–thả</h3>
+        <p>
+          Kéo một quân trong không gian ba chiều buộc bạn ước lượng chiều sâu
+          bằng mắt, rất dễ thả nhầm ô. Chạm chọn quân, rồi chạm ô đích.
+        </p>
+      </div>
+      <div class="card">
+        <span class="icon">📐</span>
+        <h3>Quân thấp hơn quân cờ thật — có lý do</h3>
+        <p>
+          Quân càng cao càng che ô phía sau nó. Với tỉ lệ bộ cờ thi đấu thật thì
+          ở thế khai cuộc bạn <em>không bấm nổi vào hàng tốt</em>. Quân được thu
+          lại đúng mức để tâm ô nào cũng còn lộ ra.
+        </p>
+      </div>
+      <div class="card">
+        <span class="icon">🔲</span>
+        <h3>Thích bàn phẳng thì tắt</h3>
+        <p>
+          Bàn ba chiều bật sẵn, nhưng tắt được trong <em>Cài đặt → Hiển thị</em>.
+          Bàn hai chiều vẫn đủ sáu bộ quân và bốn chủ đề màu như cũ.
+        </p>
+      </div>
+    </div>
+    <figure style="margin-top:22px">
+      <img src="anh/man-hinh-3d.png" alt="Hai màn hình đặt cạnh nhau: bàn cờ hai chiều và bàn cờ ba chiều">
+      <figcaption>Cùng một ván, hai kiểu bàn cờ. Đổi bất cứ lúc nào.</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -524,7 +579,7 @@
 <footer>
   <div class="wrap">
     <div>
-      <b>TỐT thí</b> — phiên bản 1.1 beta ·
+      <b>TỐT thí</b> — phiên bản 1.2 beta ·
       <a href="mailto:mittohoa@gmail.com">mittohoa@gmail.com</a>
     </div>
     <div>

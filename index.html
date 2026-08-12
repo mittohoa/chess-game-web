@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TỐT thí — cờ vua tiếng Việt, chơi ngoại tuyến</title>
-<meta name="description" content="TỐT thí: game cờ vua tiếng Việt. Bàn cờ ba chiều, luật FIDE đầy đủ, máy đấu 8 mức, 3000 bài tập chiến thuật, phân tích ván. Chơi hoàn toàn ngoại tuyến, không quảng cáo.">
+<meta name="description" content="TỐT thí: game cờ vua tiếng Việt. Bàn cờ ba chiều, luật FIDE đầy đủ, máy đấu 8 mức, 3000 bài tập chiến thuật, phân tích ván. Chơi không cần mạng, không tài khoản, không quảng cáo.">
 <meta property="og:title" content="TỐT thí — cờ vua tiếng Việt">
 <meta property="og:description" content="Bàn cờ ba chiều, luật FIDE đầy đủ, máy đấu 8 mức, 3000 bài tập. Chơi ngoại tuyến, không tài khoản, không quảng cáo.">
 <meta property="og:image" content="https://mittohoa.github.io/chess-game-web/anh/logo.png">
@@ -180,6 +180,7 @@
       <a href="#ngon-ngu">Ngôn ngữ</a>
       <a href="#giao-dien">Giao diện</a>
       <a href="#thiet-bi">Thiết bị</a>
+      <a href="#cap-nhat">Cập nhật</a>
       <a href="#huong-dan">Hướng dẫn</a>
       <a href="#hoi-dap">Hỏi đáp</a>
       <a href="#rieng-tu">Riêng tư</a>
@@ -196,12 +197,11 @@
         Không tài khoản, không quảng cáo, không thu thập dữ liệu — mở lên là chơi.
       </p>
       <div class="badges">
-        <span class="badge">Phiên bản 1.5 · beta</span>
+        <span class="badge">Phiên bản 1.6 · beta</span>
         <span class="badge">Không quảng cáo</span>
         <span class="badge">Bàn cờ 3D</span>
         <span class="badge">Tiếng Việt &amp; English</span>
-        <span class="badge">Không cần tài khoản</span>
-        <span class="badge">Không xin quyền truy cập</span>
+        <span class="badge">Không tài khoản, không quảng cáo</span>
       </div>
       <div class="cta">
         <a class="btn btn-primary" href="https://github.com/mittohoa/chess-game-web/releases/latest">
@@ -210,7 +210,7 @@
         <a class="btn btn-ghost" href="#huong-dan">Cách cài đặt</a>
       </div>
       <p class="btn-note">
-        Phiên bản 1.5.0 · 22 MB · Android 5.0 trở lên ·
+        Phiên bản 1.6.0 · 23 MB · Android 5.0 trở lên ·
         chưa có trên Google Play nên phát hành bằng tệp APK.
       </p>
     </div>
@@ -245,11 +245,15 @@
       </div>
       <div class="card">
         <span class="icon">📴</span>
-        <h3>Hoàn toàn ngoại tuyến</h3>
+        <h3>Chơi không cần mạng</h3>
         <p>
-          Không đăng nhập, không gửi gì lên mạng, không quảng cáo, không xin
-          quyền nào. Ván đang chơi tự lưu: thoát app rồi mở lên vẫn đúng chỗ cũ,
-          kể cả đồng hồ.
+          Máy đấu, kho bài tập, phần chấm ván — tất cả chạy trên máy bạn. Không
+          đăng nhập, không quảng cáo, không thu thập gì. Ván đang chơi tự lưu:
+          thoát app rồi mở lên vẫn đúng chỗ cũ, kể cả đồng hồ.
+        </p>
+        <p>
+          App chỉ dùng mạng cho <a href="#cap-nhat">một việc duy nhất</a>: mỗi
+          ngày một lần hỏi xem đã có bản mới chưa. Tắt được trong Cài đặt.
         </p>
       </div>
       <div class="card">
@@ -565,6 +569,7 @@
           <tr><td>Máy nghĩ nền, không đơ giao diện</td><td class="y">Có</td><td class="y">Có</td><td class="n">Không</td></tr>
           <tr><td>3000 bài tập chiến thuật</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
           <tr><td>Luyện tàn cuộc, 4 dạng</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
+          <tr><td>Tự báo khi có bản mới</td><td class="y">Có</td><td class="n">Không</td><td class="n">Không</td></tr>
           <tr><td>Đồng hồ thi đấu, 7 thể thức</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
           <tr><td>Âm thanh và rung phản hồi</td><td class="y">Có</td><td class="p">Chỉ âm thanh</td><td class="p">Chỉ âm thanh</td></tr>
           <tr><td>Lưu ván đang chơi</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
@@ -578,6 +583,71 @@
       thật, nên máy đấu phải nghĩ ngay trên luồng giao diện. Thời gian nghĩ vì
       thế bị giới hạn ở 0,6 giây để màn hình không đứng yên quá lâu.
     </p>
+  </div>
+</section>
+
+<section id="cap-nhat">
+  <div class="wrap">
+    <h2>Báo khi có bản mới</h2>
+    <p class="sub">
+      Chưa lên Google Play thì không ai lo việc cập nhật giúp, nên app tự lo.
+    </p>
+    <div class="grid cols-2">
+      <div>
+        <div class="card" style="margin-bottom:14px">
+          <h3>Mỗi ngày hỏi một lần</h3>
+          <p>
+            Lúc mở app, nhiều nhất một lần mỗi ngày, app hỏi xem đã có phiên bản
+            mới chưa. Có thì hiện bảng kèm phần "có gì mới"; không có thì không
+            hiện gì cả.
+          </p>
+        </div>
+        <div class="card" style="margin-bottom:14px">
+          <h3>Bạn bấm thì mới tải</h3>
+          <p>
+            Không có gì chạy ngầm sau lưng bạn. Bấm <em>Tải về</em> thì app tải,
+            có thanh tiến độ và dừng được giữa chừng. Tải xong bấm
+            <em>Cài đặt</em> thì Android mở màn hình cài đặt của nó — và vẫn hỏi
+            bạn một lần nữa trước khi cài.
+          </p>
+        </div>
+        <div class="card" style="margin-bottom:14px">
+          <h3>Cài đè, không mất gì</h3>
+          <p>
+            Ván đang chơi, lịch sử, cài đặt, điểm bài tập, thành tích, sổ tay
+            lỗi — giữ nguyên hết.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Tắt hẳn được</h3>
+          <p>
+            <em>Cài đặt → Cập nhật</em>, tắt công tắc <em>Tự kiểm tra khi mở
+            app</em>. Tắt rồi thì app không tạo kết nối mạng nào nữa.
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <h3>Đổi lại: app xin hai quyền</h3>
+          <p>
+            Tới bản 1.5.0 app không xin quyền nào cả, và đó từng là một câu trên
+            trang này. Từ 1.6.0 thì có hai, cả hai chỉ để làm đúng việc trên:
+          </p>
+          <p style="margin-top:10px">
+            <b>INTERNET</b> — hỏi xem có bản mới và tải tệp về.
+          </p>
+          <p style="margin-top:6px">
+            <b>REQUEST_INSTALL_PACKAGES</b> — mở màn hình cài đặt của Android với
+            tệp vừa tải. Quyền này <em>không</em> cho phép app tự cài.
+          </p>
+          <p style="margin-top:10px">
+            Nói thẳng: đây là đánh đổi. Muốn bỏ hẳn hai quyền đó thì
+            <a href="rieng-tu.html#cap-nhat">chính sách riêng tư</a> ghi rõ cách
+            tắt, và bạn vẫn tải bản mới bằng tay từ trang này như trước.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -623,7 +693,7 @@
     </details>
     <details>
       <summary>App có cần mạng không?</summary>
-      <p>Không. Mọi thứ chạy trên máy bạn, kể cả máy đấu và kho bài tập. App không gửi bất cứ dữ liệu nào ra ngoài.</p>
+      <p>Gần như không. Máy đấu, kho bài tập và phần chấm ván đều chạy trên máy bạn, và app không gửi dữ liệu nào của bạn ra ngoài. Việc duy nhất cần mạng là hỏi xem đã có bản mới chưa, mỗi ngày một lần — tắt được trong <em>Cài đặt → Cập nhật</em>.</p>
     </details>
     <details>
       <summary>Vì sao Android cảnh báo khi cài?</summary>

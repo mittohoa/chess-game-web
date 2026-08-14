@@ -179,6 +179,7 @@
       <a href="#khai-cuoc">Khai cuộc</a>
       <a href="#nguoi-moi">Người mới</a>
       <a href="#trang-chinh">Trang chính</a>
+      <a href="#cung-mang">Chơi cùng máy khác</a>
       <a href="#lich-su">Lịch sử</a>
       <a href="#ngon-ngu">Ngôn ngữ</a>
       <a href="#giao-dien">Giao diện</a>
@@ -200,7 +201,7 @@
         Không tài khoản, không quảng cáo, không thu thập dữ liệu — mở lên là chơi.
       </p>
       <div class="badges">
-        <span class="badge">Phiên bản 1.10.0 · beta</span>
+        <span class="badge">Phiên bản 1.11.0 · beta</span>
         <span class="badge">Không quảng cáo</span>
         <span class="badge">Bàn cờ 3D</span>
         <span class="badge">Tiếng Việt &amp; English</span>
@@ -216,7 +217,7 @@
         <a class="btn btn-ghost" href="#huong-dan">Cách cài đặt</a>
       </div>
       <p class="btn-note">
-        Phiên bản 1.10.0 · Android 5.0 trở lên (23 MB) · Windows 10/11 (12 MB,
+        Phiên bản 1.11.0 · Android 5.0 trở lên (23 MB) · Windows 10/11 (12 MB,
         giải nén là chạy) · chưa có trên Google Play nên phát hành bằng tệp tải
         thẳng.
       </p>
@@ -234,11 +235,13 @@
     <div class="grid cols-2">
       <div class="card">
         <span class="icon">🤖</span>
-        <h3>Máy đấu tám mức, chơi như người</h3>
+        <h3>Máy đấu tám mức, bốn lối chơi</h3>
         <p>
           Các mức thấp không chỉ nghĩ ít hơn mà còn <em>nhìn nhầm thế cờ</em> —
           nên chơi với chúng giống chơi với người mới, chứ không phải với một cỗ
-          máy bị bóp cổ. Đó là khác biệt bạn cảm nhận được ngay từ ván đầu.
+          máy bị bóp cổ. Từ 1.11.0 còn chọn được <em>lối chơi</em>: hung hăng,
+          chắc chắn, thích đổi quân hay cân bằng — trục này tách hẳn khỏi mức độ
+          khó.
         </p>
       </div>
       <div class="card">
@@ -588,6 +591,50 @@
   </div>
 </section>
 
+<section id="cung-mang">
+  <div class="wrap">
+    <h2>Hai máy cùng Wi-Fi là chơi được với nhau</h2>
+    <p class="sub">
+      Không tài khoản, không máy chủ, không thêm quyền nào. Mới có từ bản 1.11.0.
+    </p>
+    <div class="grid cols-3">
+      <div class="card">
+        <span class="icon">📡</span>
+        <h3>Một bên mở bàn, bên kia tìm</h3>
+        <p>
+          Điện thoại với điện thoại, hay điện thoại với máy Windows. Máy tự dò
+          nhau trong mạng nên bạn không phải gõ gì — thấy tên bàn thì chạm vào.
+        </p>
+      </div>
+      <div class="card">
+        <span class="icon">🚫</span>
+        <h3>Không quét mã QR</h3>
+        <p>
+          Quét tiện hơn gõ, nhưng nó đòi quyền camera — mà app này hứa không
+          chạm tới camera. Một chút tiện không đáng để phá lời hứa đó.
+        </p>
+      </div>
+      <div class="card">
+        <span class="icon">⚖️</span>
+        <h3>Không lùi, không gợi ý</h3>
+        <p>
+          Hoàn tác một mình thì hai bàn cờ lệch nhau ngay; còn hỏi máy trong lúc
+          người kia đang đợi thì họ không có cách nào biết. Xin thua và mời hòa
+          thì vẫn có.
+        </p>
+      </div>
+    </div>
+    <p class="callout" style="margin-top:20px">
+      <strong>Nói trước cho thật:</strong> phần này mới chạy thử giữa hai tiến
+      trình trên cùng một máy, chưa lần nào giữa hai máy thật qua Wi-Fi. Chỗ
+      đáng ngờ nhất là phần tự tìm bàn — vài router chặn loại gói tin đó. Tìm
+      không ra thì bên mở bàn nhìn dòng <em>"Địa chỉ máy này"</em> rồi bên kia gõ
+      tay vào ô dưới cùng của bảng tìm bàn. Gặp lỗi xin báo về
+      <a href="mailto:mittohoa@gmail.com">mittohoa@gmail.com</a>.
+    </p>
+  </div>
+</section>
+
 <section id="trang-chinh">
   <div class="wrap">
     <h2>Mở app lên là thấy hết, không phải mò</h2>
@@ -706,6 +753,8 @@
           <tr><td>Lưu ván đang chơi</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
           <tr><td>Xuất / nhập PGN, FEN</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
           <tr><td>Trang chính: mọi chế độ ngay màn hình đầu</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
+          <tr><td>Chơi cùng máy khác trong mạng nội bộ</td><td class="y">Có</td><td class="y">Có</td><td class="n">Không</td></tr>
+          <tr><td>Bốn lối chơi của máy đấu</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
           <tr><td>Bản phát hành sẵn có</td><td class="y">APK</td><td class="y">zip, giải nén là chạy</td><td class="p">Tự dựng</td></tr>
         </tbody>
       </table>
@@ -919,7 +968,7 @@
 <footer>
   <div class="wrap">
     <div>
-      <b>TỐT thí</b> — phiên bản 1.10.0 beta ·
+      <b>TỐT thí</b> — phiên bản 1.11.0 beta ·
       <a href="mailto:mittohoa@gmail.com">mittohoa@gmail.com</a>
     </div>
     <div>

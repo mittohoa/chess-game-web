@@ -202,7 +202,7 @@
         Không tài khoản, không quảng cáo, không thu thập dữ liệu — mở lên là chơi.
       </p>
       <div class="badges">
-        <span class="badge">Phiên bản 1.13.0 · beta</span>
+        <span class="badge">Phiên bản 1.14.0 · beta</span>
         <span class="badge">Không quảng cáo</span>
         <span class="badge">Bàn cờ 3D</span>
         <span class="badge">Tiếng Việt &amp; English</span>
@@ -218,7 +218,7 @@
         <a class="btn btn-ghost" href="#huong-dan">Cách cài đặt</a>
       </div>
       <p class="btn-note">
-        Phiên bản 1.13.0 · Android 5.0 trở lên (23 MB) · Windows 10/11 (12 MB,
+        Phiên bản 1.14.0 · Android 5.0 trở lên (23 MB) · Windows 10/11 (12 MB,
         giải nén là chạy) · chưa có trên Google Play nên phát hành bằng tệp tải
         thẳng.
       </p>
@@ -242,8 +242,10 @@
           nên chơi với chúng giống chơi với người mới, chứ không phải với một cỗ
           máy bị bóp cổ. Từ 1.11.0 còn chọn được <em>lối chơi</em>: hung hăng,
           chắc chắn, thích đổi quân hay cân bằng — trục này tách hẳn khỏi mức độ
-          khó. Bản 1.13.0 thêm ba kỹ thuật cắt tỉa, nên trong cùng hai giây máy
-          đi sâu <em>bảy tầng thay vì năm</em>.
+          khó. Bản 1.13.0 thêm ba kỹ thuật cắt tỉa để máy tính sâu hơn; bản
+          1.14.0 dạy máy nhìn thêm <em>quân có việc để làm hay không</em> và
+          <em>vua có đang bị vây hay không</em> — hai thứ người chơi nào cũng
+          cảm thấy mà máy thì trước giờ chưa biết.
         </p>
       </div>
       <div class="card">
@@ -719,6 +721,15 @@
             nào.
           </p>
         </div>
+        <div class="card" style="margin-bottom:14px">
+          <h3>Năm ván dở cùng lúc</h3>
+          <p>
+            Trước 1.14.0 app chỉ nhớ <em>một</em> ván: đang dở một ván với máy
+            mà mở chơi hai người một lát là ván kia biến mất, không một lời báo.
+            Giờ giữ được tới năm ván — ván gần nhất nằm trên cùng kèm ảnh thế
+            cờ, những ván còn lại xếp bên dưới. Xoá ván nào cũng hỏi lại trước.
+          </p>
+        </div>
         <div class="card">
           <h3>Bàn cờ vẫn sạch như cũ</h3>
           <p>
@@ -804,13 +815,14 @@
           <tr><td>Tự báo khi có bản mới</td><td class="y">Có</td><td class="p">Báo, nhưng tải bằng tay</td><td class="n">Không</td></tr>
           <tr><td>Đồng hồ thi đấu, 7 thể thức</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
           <tr><td>Âm thanh và rung phản hồi</td><td class="y">Có</td><td class="p">Chỉ âm thanh</td><td class="p">Chỉ âm thanh</td></tr>
-          <tr><td>Lưu ván đang chơi</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
+          <tr><td>Lưu tới 5 ván đang chơi</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
+          <tr><td>Sao lưu và khôi phục dữ liệu</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
           <tr><td>Xuất / nhập PGN, FEN</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
           <tr><td>Trang chính: mọi chế độ ngay màn hình đầu</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
           <tr><td>Chơi cùng máy khác trong mạng nội bộ</td><td class="y">Có</td><td class="y">Có</td><td class="n">Không</td></tr>
           <tr><td>Bốn lối chơi của máy đấu</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
           <tr><td>Luyện toạ độ · chấp quân · bảng điểm yếu · che bàn cờ</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
-          <tr><td>Chơi bằng bàn phím</td><td class="p">Cần bàn phím rời</td><td class="y">Có</td><td class="y">Có</td></tr>
+          <tr><td>Chơi bằng bàn phím, cả 4 màn có bàn cờ</td><td class="p">Cần bàn phím rời</td><td class="y">Có</td><td class="y">Có</td></tr>
           <tr><td>Bản phát hành sẵn có</td><td class="y">APK</td><td class="y">zip, giải nén là chạy</td><td class="p">Tự dựng</td></tr>
         </tbody>
       </table>
@@ -993,6 +1005,12 @@
         vì app không kết nối ra ngoài.
       </p>
       <p style="margin:12px 0 0">
+        Mặt trái của việc đó là đổi máy thì mất hết, nên từ 1.14.0 có
+        <em>Cài đặt → Sao lưu dữ liệu</em>: xuất toàn bộ ván dở, lịch sử, Elo,
+        chuỗi ngày, sổ tay lỗi và tuỳ chọn ra một tệp bạn tự giữ. Tệp đó nằm ở
+        máy bạn, không đi đâu cả — muốn chuyển sang máy khác thì bạn tự chép.
+      </p>
+      <p style="margin:12px 0 0">
         Bản đầy đủ: <a href="rieng-tu.html">Chính sách quyền riêng tư</a> ·
         Thắc mắc: <a href="mailto:mittohoa@gmail.com">mittohoa@gmail.com</a>.
       </p>
@@ -1024,7 +1042,7 @@
 <footer>
   <div class="wrap">
     <div>
-      <b>TỐT thí</b> — phiên bản 1.13.0 beta ·
+      <b>TỐT thí</b> — phiên bản 1.14.0 beta ·
       <a href="mailto:mittohoa@gmail.com">mittohoa@gmail.com</a>
     </div>
     <div>

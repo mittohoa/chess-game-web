@@ -202,7 +202,7 @@
         Không tài khoản, không quảng cáo, không thu thập dữ liệu — mở lên là chơi.
       </p>
       <div class="badges">
-        <span class="badge">Phiên bản 1.14.0 · beta</span>
+        <span class="badge">Phiên bản 1.15.0 · beta</span>
         <span class="badge">Không quảng cáo</span>
         <span class="badge">Bàn cờ 3D</span>
         <span class="badge">Tiếng Việt &amp; English</span>
@@ -218,7 +218,7 @@
         <a class="btn btn-ghost" href="#huong-dan">Cách cài đặt</a>
       </div>
       <p class="btn-note">
-        Phiên bản 1.14.0 · Android 5.0 trở lên (23 MB) · Windows 10/11 (12 MB,
+        Phiên bản 1.15.0 · Android 5.0 trở lên (23 MB) · Windows 10/11 (12 MB,
         giải nén là chạy) · chưa có trên Google Play nên phát hành bằng tệp tải
         thẳng.
       </p>
@@ -245,7 +245,8 @@
           khó. Bản 1.13.0 thêm ba kỹ thuật cắt tỉa để máy tính sâu hơn; bản
           1.14.0 dạy máy nhìn thêm <em>quân có việc để làm hay không</em> và
           <em>vua có đang bị vây hay không</em> — hai thứ người chơi nào cũng
-          cảm thấy mà máy thì trước giờ chưa biết.
+          cảm thấy mà máy thì trước giờ chưa biết. Bản 1.15.0 thêm Xe ở cột
+          thoáng và tiền đồn cho quân nhẹ.
         </p>
       </div>
       <div class="card">
@@ -481,6 +482,27 @@
         <img src="anh/man-hinh-phan-tich.png" alt="Màn hình phân tích: thanh đánh giá cạnh bàn cờ, mũi tên chỉ nước tốt nhất, biểu đồ đánh giá và bảng độ chính xác">
       </figure>
     </div>
+    <div class="grid cols-2" style="margin-top:18px">
+      <div class="card">
+        <span class="icon">🔬</span>
+        <h3>Bàn phân tích tự do — mới ở 1.15.0</h3>
+        <p>
+          Chấm ván chỉ nói ván <em>đã</em> đánh xong. Bàn phân tích là chỗ hỏi
+          "thế nếu đi khác thì sao": bạn cầm cả hai bên, đi thử nước nào cũng
+          được, và máy chấm lại ngay sau mỗi nước — thanh đánh giá với mũi tên
+          chạy theo. Lùi lại thử nước khác bao nhiêu lần tuỳ thích.
+        </p>
+      </div>
+      <div class="card">
+        <span class="icon">📋</span>
+        <h3>Không đối thủ, không đồng hồ, không tính điểm</h3>
+        <p>
+          Ở đây không có đúng sai, nên không có gì ghi vào Elo hay lịch sử. Mở
+          từ trang chính thì nó lấy sẵn thế cờ của ván bạn đang dở; muốn dựng
+          thế cờ khác thì dán FEN vào, hoặc chép FEN thế cờ đang xem ra.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -520,7 +542,7 @@
   <div class="wrap">
     <h2>Ván cờ của bạn có tên tuổi</h2>
     <p class="sub">
-      53 khai cuộc hay gặp — để gọi tên, để máy đi tử tế, và để luyện.
+      73 khai cuộc hay gặp — để gọi tên, để máy đi tử tế, và để luyện.
     </p>
     <div class="grid cols-2">
       <div>
@@ -537,7 +559,9 @@
           <p>
             Không phải để nó mạnh hơn. Máy tính toán độ sâu hạn chế đi khai cuộc
             rất nhạt và lặp lại, ván nào cũng như ván nào. Có sách thì mỗi ván
-            một khai cuộc khác, và đều là những khai cuộc thật.
+            một khai cuộc khác, và đều là những khai cuộc thật. Bản 1.15.0 cân
+            lại tần suất: trước đó máy bốc đều nên <b>1.b3</b> ra ngang
+            <b>1.e4</b>, và một phần ba số ván mở màn bằng khai cuộc bên lề.
           </p>
         </div>
         <div class="card">
@@ -660,6 +684,8 @@
         <p>
           Điện thoại với điện thoại, hay điện thoại với máy Windows. Máy tự dò
           nhau trong mạng nên bạn không phải gõ gì — thấy tên bàn thì chạm vào.
+          Từ 1.15.0 phần tìm bàn thử <em>ba đường</em> lần lượt, vì đường đầu
+          hay bị Android lặng lẽ chặn.
         </p>
       </div>
       <div class="card">
@@ -683,9 +709,11 @@
     <p class="callout" style="margin-top:20px">
       <strong>Nói trước cho thật:</strong> phần này mới chạy thử giữa hai tiến
       trình trên cùng một máy, chưa lần nào giữa hai máy thật qua Wi-Fi. Chỗ
-      đáng ngờ nhất là phần tự tìm bàn — vài router chặn loại gói tin đó. Tìm
-      không ra thì bên mở bàn nhìn dòng <em>"Địa chỉ máy này"</em> rồi bên kia gõ
-      tay vào ô dưới cùng của bảng tìm bàn. Gặp lỗi xin báo về
+      đáng ngờ nhất vẫn là phần tự tìm bàn — vài router chặn loại gói tin đó.
+      Bản 1.15.0 làm nó lì hơn: hỏi cả mạng, rồi hỏi riêng từng mạng con máy
+      đang nối vào, không ra bàn nào thì hỏi thẳng từng địa chỉ. Vẫn không ra
+      thì bên mở bàn nhìn dòng <em>"Địa chỉ máy này"</em> rồi bên kia gõ tay vào
+      ô dưới cùng của bảng tìm bàn. Gặp lỗi xin báo về
       <a href="mailto:mittohoa@gmail.com">mittohoa@gmail.com</a>.
     </p>
   </div>
@@ -810,13 +838,14 @@
           <tr><td>Máy nghĩ nền, không đơ giao diện</td><td class="y">Có</td><td class="y">Có</td><td class="n">Không</td></tr>
           <tr><td>3000 bài tập chiến thuật</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
           <tr><td>Luyện tàn cuộc, 4 dạng</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
-          <tr><td>Luyện khai cuộc, 53 khai cuộc</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
+          <tr><td>Luyện khai cuộc, 73 khai cuộc</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
           <tr><td>Chế độ người mới</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
           <tr><td>Tự báo khi có bản mới</td><td class="y">Có</td><td class="p">Báo, nhưng tải bằng tay</td><td class="n">Không</td></tr>
           <tr><td>Đồng hồ thi đấu, 7 thể thức</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
           <tr><td>Âm thanh và rung phản hồi</td><td class="y">Có</td><td class="p">Chỉ âm thanh</td><td class="p">Chỉ âm thanh</td></tr>
           <tr><td>Lưu tới 5 ván đang chơi</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
           <tr><td>Sao lưu và khôi phục dữ liệu</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
+          <tr><td>Bàn phân tích tự do</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
           <tr><td>Xuất / nhập PGN, FEN</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
           <tr><td>Trang chính: mọi chế độ ngay màn hình đầu</td><td class="y">Có</td><td class="y">Có</td><td class="y">Có</td></tr>
           <tr><td>Chơi cùng máy khác trong mạng nội bộ</td><td class="y">Có</td><td class="y">Có</td><td class="n">Không</td></tr>
@@ -1042,7 +1071,7 @@
 <footer>
   <div class="wrap">
     <div>
-      <b>TỐT thí</b> — phiên bản 1.14.0 beta ·
+      <b>TỐT thí</b> — phiên bản 1.15.0 beta ·
       <a href="mailto:mittohoa@gmail.com">mittohoa@gmail.com</a>
     </div>
     <div>

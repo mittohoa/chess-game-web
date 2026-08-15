@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <!--
+    Chỗ này sẽ được thay bằng giá trị của `--base-href` lúc dựng. Bản đưa lên
+    trang giới thiệu nằm trong thư mục con nên bắt buộc phải truyền cờ đó:
+
+      flutter build web --release --base-href /chess-game-web/choi-thu/
+  -->
+  <base href="/chess-game-web/choi-thu/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Cờ vua tiếng Việt: luật FIDE đầy đủ, máy đấu 8 mức, 3000 bài tập, chơi ngoại tuyến.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="TỐT thí">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>TỐT thí — cờ vua tiếng Việt</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!--
+    Màn chờ. Bản web nặng khoảng 11 MB ở lần tải đầu, và mặc định Flutter để
+    trang trắng trơn suốt chừng ấy thời gian — người vào bằng 3G sẽ tưởng trang
+    hỏng và đóng đi trước khi ván cờ kịp hiện ra. Viết thẳng vào HTML chứ không
+    đợi Dart: lúc này chưa có dòng Dart nào chạy cả.
+  -->
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; background: #faf7f2; }
+    @media (prefers-color-scheme: dark) { html, body { background: #14120f; } }
+
+    #dang-tai {
+      position: fixed; inset: 0; display: grid; place-content: center;
+      justify-items: center; gap: 14px; padding: 24px; text-align: center;
+      font: 15px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      color: #6b6257;
+    }
+    @media (prefers-color-scheme: dark) { #dang-tai { color: #a89c8c; } }
+
+    #dang-tai img { width: 68px; height: 68px; border-radius: 16px; }
+    #dang-tai b { font-size: 20px; color: #8b5a2b; letter-spacing: .5px; }
+    #dang-tai .nho { font-size: 13px; max-width: 340px; }
+    #dang-tai a { color: #8b5a2b; }
+
+    .quay {
+      width: 26px; height: 26px; border-radius: 50%;
+      border: 3px solid #e6ded2; border-top-color: #8b5a2b;
+      animation: xoay 0.9s linear infinite;
+    }
+    @keyframes xoay { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { .quay { animation: none; } }
+  </style>
+</head>
+<body>
+  <div id="dang-tai">
+    <img src="icons/Icon-192.png" alt="">
+    <b>TỐT thí</b>
+    <div class="quay"></div>
+    <div>Đang tải bản chơi thử…</div>
+    <div class="nho">
+      Lần đầu tải khoảng 11 MB nên hơi lâu; những lần sau trình duyệt nhớ sẵn.
+      Muốn nhanh và chạy mượt hơn thì
+      <a href="https://github.com/mittohoa/chess-game-web/releases/latest">tải bản cài đặt</a>.
+    </div>
+  </div>
+
+  <script>
+    // Flutter phát sự kiện này khi khung hình đầu tiên đã vẽ xong — đúng lúc
+    // màn chờ hết việc.
+    window.addEventListener('flutter-first-frame', function () {
+      var man = document.getElementById('dang-tai');
+      if (man) man.remove();
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

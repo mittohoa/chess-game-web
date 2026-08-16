@@ -1,4 +1,9 @@
-# Kho khai cuoc — moi dong: ECO|ten tieng Viet|ten tieng Anh|cac nuoc UCI cach nhau bang dau cach
+# Kho khai cuoc — moi dong:
+#   ECO|ten tieng Viet|ten tieng Anh|cac nuoc UCI|y tuong (vi)|y tuong (en)
+#
+# Hai cot y tuong them tu 1.22.0. Ten khai cuoc von da song ngu ngay trong
+# tep nay, nen phan y tuong di theo dung cach do thay vi tach sang tep ngon
+# ngu — mot dong la mot khai cuoc, doc va sua deu o mot cho.
 #
 # Chi giu **bien chinh** cua nhung khai cuoc hay gap nhat, 6-12 nua nuoc moi
 # dong. Muc dich khong phai phu het ly thuyet — muc dich la (1) goi ten van co
@@ -6,79 +11,79 @@
 # luyen. Ai muon sau hon thi da co sach.
 #
 # Nuoc viet bang UCI vi ca app dung UCI; ky phap SAN chi dung de hien ra man.
-C20|Ván cờ Vua|King's Pawn Game|e2e4 e7e5
-C40|Phòng thủ Philidor|Philidor Defence|e2e4 e7e5 g1f3 d7d6 d2d4 e5d4 f3d4 g8f6
-C41|Ván cờ Ý|Italian Game|e2e4 e7e5 g1f3 b8c6 f1c4
-C50|Giuoco Piano|Giuoco Piano|e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 c2c3 g8f6 d2d4
-C55|Phòng thủ Hai Mã|Two Knights Defence|e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 d2d4 e5d4
-C60|Ván cờ Tây Ban Nha|Ruy Lopez|e2e4 e7e5 g1f3 b8c6 f1b5
-C65|Tây Ban Nha, biến Berlin|Ruy Lopez, Berlin Defence|e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4
-C68|Tây Ban Nha, biến đổi quân|Ruy Lopez, Exchange|e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5c6 d7c6
-C84|Tây Ban Nha, biến chính|Ruy Lopez, Closed|e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7
-C44|Ván cờ Scotland|Scotch Game|e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4
-C33|Gambit Vua|King's Gambit|e2e4 e7e5 f2f4 e5f4 g1f3
-C46|Ván cờ Ba Mã|Three Knights Game|e2e4 e7e5 g1f3 b8c6 b1c3
-C47|Ván cờ Bốn Mã|Four Knights Game|e2e4 e7e5 g1f3 b8c6 b1c3 g8f6
-C42|Phòng thủ Nga|Petrov Defence|e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4
-B20|Phòng thủ Sicilia|Sicilian Defence|e2e4 c7c5
-B21|Sicilia, gambit Smith-Morra|Sicilian, Smith-Morra Gambit|e2e4 c7c5 d2d4 c5d4 c2c3
-B22|Sicilia, biến Alapin|Sicilian, Alapin|e2e4 c7c5 c2c3 d7d5 e4d5 d8d5
-B23|Sicilia, đóng|Sicilian, Closed|e2e4 c7c5 b1c3 b8c6 g2g3
-B27|Sicilia, biến Rồng gia tốc|Sicilian, Accelerated Dragon|e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6
-B30|Sicilia, biến Rossolimo|Sicilian, Rossolimo|e2e4 c7c5 g1f3 b8c6 f1b5
-B50|Sicilia, biến Najdorf|Sicilian, Najdorf|e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6
-B70|Sicilia, biến Rồng|Sicilian, Dragon|e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6
-B80|Sicilia, biến Scheveningen|Sicilian, Scheveningen|e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6
-B10|Phòng thủ Caro-Kann|Caro-Kann Defence|e2e4 c7c6 d2d4 d7d5
-B12|Caro-Kann, biến tiến|Caro-Kann, Advance|e2e4 c7c6 d2d4 d7d5 e4e5 c8f5
-B18|Caro-Kann, biến cổ điển|Caro-Kann, Classical|e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5
-B01|Phòng thủ Scandinavia|Scandinavian Defence|e2e4 d7d5 e4d5 d8d5 b1c3 d5a5
-C00|Phòng thủ Pháp|French Defence|e2e4 e7e6 d2d4 d7d5
-C02|Pháp, biến tiến|French, Advance|e2e4 e7e6 d2d4 d7d5 e4e5 c7c5
-C11|Pháp, biến cổ điển|French, Classical|e2e4 e7e6 d2d4 d7d5 b1c3 g8f6
-B07|Phòng thủ Pirc|Pirc Defence|e2e4 d7d6 d2d4 g8f6 b1c3 g7g6
-B00|Phòng thủ Alekhine|Alekhine Defence|e2e4 g8f6 e4e5 f6d5 d2d4 d7d6
-D00|Ván cờ Tốt Hậu|Queen's Pawn Game|d2d4 d7d5
-D06|Gambit Hậu|Queen's Gambit|d2d4 d7d5 c2c4
-D20|Gambit Hậu nhận|Queen's Gambit Accepted|d2d4 d7d5 c2c4 d5c4 g1f3 g8f6 e2e3
-D30|Gambit Hậu từ chối|Queen's Gambit Declined|d2d4 d7d5 c2c4 e7e6 b1c3 g8f6
-D10|Phòng thủ Slav|Slav Defence|d2d4 d7d5 c2c4 c7c6 g1f3 g8f6
-D43|Phòng thủ Nửa Slav|Semi-Slav Defence|d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6
-D80|Phòng thủ Grünfeld|Grünfeld Defence|d2d4 g8f6 c2c4 g7g6 b1c3 d7d5
-E60|Phòng thủ Ấn Độ Vua|King's Indian Defence|d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6
-E20|Phòng thủ Nimzo-Ấn|Nimzo-Indian Defence|d2d4 g8f6 c2c4 e7e6 b1c3 f8b4
-E12|Phòng thủ Hậu Ấn|Queen's Indian Defence|d2d4 g8f6 c2c4 e7e6 g1f3 b7b6
-A40|Phòng thủ Ấn Độ cũ|Old Indian Defence|d2d4 g8f6 c2c4 d7d6
-A45|Ván cờ Ấn Độ|Indian Game|d2d4 g8f6
-A80|Phòng thủ Hà Lan|Dutch Defence|d2d4 f7f5
-A10|Khai cuộc Anh|English Opening|c2c4
-A15|Anh, biến Ấn Độ|English, Anglo-Indian|c2c4 g8f6 g1f3 g7g6
-A04|Khai cuộc Réti|Réti Opening|g1f3 d7d5 c2c4
-A01|Khai cuộc Larsen|Larsen Opening|b2b3
-A02|Khai cuộc Bird|Bird Opening|f2f4
-B06|Phòng thủ Hiện đại|Modern Defence|e2e4 g7g6 d2d4 f8g7
+C20|Ván cờ Vua|King's Pawn Game|e2e4 e7e5|Mở bằng tốt Vua: nhanh nhất để chiếm trung tâm và mở đường cho cả Tượng lẫn Hậu.|The king's pawn: the fastest way to grab the centre and open lines for bishop and queen.
+C40|Phòng thủ Philidor|Philidor Defence|e2e4 e7e5 g1f3 d7d6 d2d4 e5d4 f3d4 g8f6|Đen đỡ tốt e5 bằng d6 — chắc chắn nhưng bó hẹp, vì Tượng f8 bị chính con tốt ấy chặn.|Black props up e5 with d6 — solid but cramped, since that pawn blocks the f8 bishop.
+C41|Ván cờ Ý|Italian Game|e2e4 e7e5 g1f3 b8c6 f1c4|Tượng ra c4 nhắm thẳng f7, ô yếu nhất bên Đen. Khai cuộc dạy người mới nhiều nhất.|The bishop on c4 stares at f7, Black's weakest square. The best opening to learn on.
+C50|Giuoco Piano|Giuoco Piano|e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 c2c3 g8f6 d2d4|Cả hai bên ra quân êm ả rồi mới đẩy d4 giành trung tâm. *Ván cờ êm* đúng như tên gọi.|Both sides develop quietly, then White pushes d4 for the centre. The 'quiet game', as named.
+C55|Phòng thủ Hai Mã|Two Knights Defence|e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 d2d4 e5d4|Đen ra Mã f6 phản công ngay thay vì đỡ. Dẫn tới những thế cờ sắc bén nhất cho người mới.|Black counters with Nf6 instead of defending. It leads to the sharpest lines a beginner meets.
+C60|Ván cờ Tây Ban Nha|Ruy Lopez|e2e4 e7e5 g1f3 b8c6 f1b5|Tượng ép Mã c6 — quân đang giữ tốt e5. Khai cuộc được chơi nhiều nhất trong lịch sử.|The bishop pressures the c6 knight, which guards e5. The most-played opening in history.
+C65|Tây Ban Nha, biến Berlin|Ruy Lopez, Berlin Defence|e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4|Đen bỏ qua a6, ra Mã ngay. Rất chắc, và nổi tiếng vì Kramnik dùng nó hạ Kasparov.|Black skips a6 and develops. Extremely solid, famous for Kramnik beating Kasparov with it.
+C68|Tây Ban Nha, biến đổi quân|Ruy Lopez, Exchange|e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5c6 d7c6|Trắng đổi Tượng lấy Mã, làm hỏng cấu trúc tốt Đen để đổi lấy tàn cuộc dễ chơi hơn.|White trades bishop for knight, damaging Black's structure in return for a friendlier endgame.
+C84|Tây Ban Nha, biến chính|Ruy Lopez, Closed|e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7|Biến chính: Trắng giữ Tượng, cả hai bên xây quân chậm rãi cho một trận đánh dài.|The main line: White keeps the bishop and both sides build slowly for a long fight.
+C44|Ván cờ Scotland|Scotch Game|e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4|Trắng phá trung tâm ngay bằng d4, mở bàn cờ sớm hơn Tây Ban Nha nhiều.|White breaks with d4 at once, opening the position far earlier than the Ruy Lopez.
+C33|Gambit Vua|King's Gambit|e2e4 e7e5 f2f4 e5f4 g1f3|Trắng thí tốt f để mở cột f và đẩy tốt trung tâm. Ván cờ của thế kỷ 19, giờ hiếm thấy.|White gives the f-pawn for the f-file and a big centre. A 19th-century game, rare today.
+C46|Ván cờ Ba Mã|Three Knights Game|e2e4 e7e5 g1f3 b8c6 b1c3|Cả hai đưa Mã ra trước, chưa vội quyết định gì. An toàn, dễ hiểu, ít bẫy.|Knights out first, no commitments yet. Safe, easy to grasp, few traps.
+C47|Ván cờ Bốn Mã|Four Knights Game|e2e4 e7e5 g1f3 b8c6 b1c3 g8f6|Bốn con Mã ra hết trước khi Tượng động đậy. Đối xứng, chắc, và thường hoà.|All four knights come out before any bishop. Symmetrical, solid, and often drawn.
+C42|Phòng thủ Nga|Petrov Defence|e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4|Đen không đỡ e5 mà ăn lại e4 — đổi ngang, thế cờ thoáng và rất khó phá.|Black ignores e5 and takes e4 instead — an even trade, an open and very hard-to-crack game.
+B20|Phòng thủ Sicilia|Sicilian Defence|e2e4 c7c5|Đen đổi tốt cánh lấy tốt trung tâm của Trắng: thế cờ mất cân đối, chơi ăn thua chứ không hoà.|Black trades a wing pawn for White's centre pawn: an unbalanced game, played to win, not to draw.
+B21|Sicilia, gambit Smith-Morra|Sicilian, Smith-Morra Gambit|e2e4 c7c5 d2d4 c5d4 c2c3|Trắng thí tốt để ra quân thật nhanh và mở hai cột giữa. Nguy hiểm nếu Đen chơi hớ.|White sacrifices a pawn for very fast development and two open central files. Dangerous if Black slips.
+B22|Sicilia, biến Alapin|Sicilian, Alapin|e2e4 c7c5 c2c3 d7d5 e4d5 d8d5|Trắng dựng tốt d4 vững chãi thay vì lao vào đánh. Chậm mà chắc, và ít phải học thuộc.|White builds a firm d4 centre instead of charging in. Slow, solid, and far less to memorise.
+B23|Sicilia, đóng|Sicilian, Closed|e2e4 c7c5 b1c3 b8c6 g2g3|Trắng không đổi tốt, giữ bàn cờ đóng và chuẩn bị tấn công cánh Vua.|White avoids the trade, keeps the position closed, and prepares a kingside attack.
+B27|Sicilia, biến Rồng gia tốc|Sicilian, Accelerated Dragon|e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6|Đen dựng Tượng g7 nhắm chéo dài, tấn công cánh Hậu trong khi Trắng đánh cánh Vua.|Black fianchettoes on g7 for the long diagonal, attacking the queenside while White goes kingside.
+B30|Sicilia, biến Rossolimo|Sicilian, Rossolimo|e2e4 c7c5 g1f3 b8c6 f1b5|Trắng đổi Tượng lấy Mã c6 ngay, tránh hẳn kho lý thuyết đồ sộ của Sicilia mở.|White trades the bishop for the c6 knight early, dodging the huge theory of the open Sicilian.
+B50|Sicilia, biến Najdorf|Sicilian, Najdorf|e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6|Biến được nghiên cứu nhiều nhất trong cả môn cờ. Đen chuẩn bị b5 phản công cánh Hậu.|The most heavily analysed line in all of chess. Black prepares ...b5 and queenside counterplay.
+B70|Sicilia, biến Rồng|Sicilian, Dragon|e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6|Tượng g7 là *con rồng*: nó nhắm suốt đường chéo tới a1. Hai bên đua nhau chiếu hết.|The g7 bishop is the dragon, breathing down the long diagonal to a1. Both sides race to mate.
+B80|Sicilia, biến Scheveningen|Sicilian, Scheveningen|e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6|Đen dựng tường tốt e6-d6 chắc chắn rồi mới phản công. Chậm, chắc, và khó phá.|Black builds a solid e6/d6 wall before counterattacking. Slow, sturdy, hard to break.
+B10|Phòng thủ Caro-Kann|Caro-Kann Defence|e2e4 c7c6 d2d4 d7d5|Đen chuẩn bị d5 bằng c6 — giữ được đường ra cho Tượng c8, thứ mà Phòng thủ Pháp mất.|Black prepares ...d5 with c6, keeping the c8 bishop's escape route that the French gives up.
+B12|Caro-Kann, biến tiến|Caro-Kann, Advance|e2e4 c7c6 d2d4 d7d5 e4e5 c8f5|Trắng đẩy tốt lên e5 chiếm không gian, Đen đổi lại bằng cách đánh vào gốc chuỗi tốt.|White pushes e5 for space; Black hits back at the base of the pawn chain.
+B18|Caro-Kann, biến cổ điển|Caro-Kann, Classical|e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5|Đen đưa Tượng ra f5 trước khi đóng đường, rồi mới dựng tường tốt. Rất chắc chắn.|Black develops the bishop to f5 before closing the door, then builds the pawn wall. Very solid.
+B01|Phòng thủ Scandinavia|Scandinavian Defence|e2e4 d7d5 e4d5 d8d5 b1c3 d5a5|Đen phá trung tâm ngay từ nước một. Đơn giản, ít lý thuyết, hợp người mới cầm Đen.|Black hits the centre on move one. Simple, little theory, good for a beginner with Black.
+C00|Phòng thủ Pháp|French Defence|e2e4 e7e6 d2d4 d7d5|Đen dựng tốt e6-d5 rất chắc, đổi lại Tượng c8 bị chính tốt e6 nhốt trong nhà.|Black builds a rock-solid e6/d5 chain, at the cost of burying the c8 bishop behind e6.
+C02|Pháp, biến tiến|French, Advance|e2e4 e7e6 d2d4 d7d5 e4e5 c7c5|Trắng khoá bàn cờ bằng e5 và chiếm không gian; cả ván xoay quanh nước phá c5 của Đen.|White closes the position with e5 and takes space; the whole game revolves around Black's ...c5 break.
+C11|Pháp, biến cổ điển|French, Classical|e2e4 e7e6 d2d4 d7d5 b1c3 g8f6|Trắng ra Mã c3 giữ e4, Đen ép ngay bằng Tượng và tốt. Thế cờ căng từ sớm.|White defends e4 with Nc3; Black pressures it immediately. Tension from early on.
+B07|Phòng thủ Pirc|Pirc Defence|e2e4 d7d6 d2d4 g8f6 b1c3 g7g6|Đen nhường trung tâm cho Trắng rồi phá lại sau. Ít lý thuyết, nhiều mưu mẹo.|Black hands White the centre, then strikes at it later. Little theory, plenty of tricks.
+B00|Phòng thủ Alekhine|Alekhine Defence|e2e4 g8f6 e4e5 f6d5 d2d4 d7d6|Đen chọc Mã ra ngay để Trắng đẩy tốt loạn xạ rồi phản công vào chính chuỗi tốt đó.|Black provokes White into overextending the pawns, then counterattacks that same chain.
+D00|Ván cờ Tốt Hậu|Queen's Pawn Game|d2d4 d7d5|Mở bằng tốt Hậu: chậm hơn tốt Vua nhưng thế cờ vững, ít bị đánh úp.|The queen's pawn: slower than e4 but sturdier, with far fewer early ambushes.
+D06|Gambit Hậu|Queen's Gambit|d2d4 d7d5 c2c4|Trắng mời Đen ăn tốt c4 — không phải cho không, vì lấy lại rất dễ và Trắng được trung tâm.|White offers the c4 pawn — not a real gift: it comes back easily and White gets the centre.
+D20|Gambit Hậu nhận|Queen's Gambit Accepted|d2d4 d7d5 c2c4 d5c4 g1f3 g8f6 e2e3|Đen nhận tốt rồi phải trả lại; đổi lại được thế cờ thoáng và Tượng ra ngoài sớm.|Black takes the pawn and must give it back, gaining an open game and an early developed bishop.
+D30|Gambit Hậu từ chối|Queen's Gambit Declined|d2d4 d7d5 c2c4 e7e6 b1c3 g8f6|Đen giữ tốt d5 bằng e6, chắc như Phòng thủ Pháp nhưng không bị nhốt Tượng.|Black holds d5 with e6 — as solid as the French, without burying the bishop.
+D10|Phòng thủ Slav|Slav Defence|d2d4 d7d5 c2c4 c7c6 g1f3 g8f6|Đen giữ d5 bằng c6, chừa đường cho Tượng c8 ra ngoài. Chắc và rất khó bị đánh gãy.|Black holds d5 with c6, leaving the c8 bishop a way out. Solid and very hard to crack.
+D43|Phòng thủ Nửa Slav|Semi-Slav Defence|d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6|Đen chơi cả c6 lẫn e6 — chắc gấp đôi, nhưng phải tính đúng lúc để bung ra bằng c5 hoặc e5.|Black plays both c6 and e6 — doubly solid, but must time the ...c5 or ...e5 break correctly.
+D80|Phòng thủ Grünfeld|Grünfeld Defence|d2d4 g8f6 c2c4 g7g6 b1c3 d7d5|Đen để Trắng dựng trung tâm to rồi bắn phá bằng Tượng g7 và quân. Ăn thua cao.|Black lets White build a big centre, then shoots at it with the g7 bishop and pieces. Double-edged.
+E60|Phòng thủ Ấn Độ Vua|King's Indian Defence|d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6|Đen nhường trung tâm, nhập thành nhanh, rồi đẩy e5 hoặc c5 phá lại. Tấn công cánh Vua rất mạnh.|Black concedes the centre, castles fast, then breaks with ...e5 or ...c5. A ferocious kingside attacker.
+E20|Phòng thủ Nimzo-Ấn|Nimzo-Indian Defence|d2d4 g8f6 c2c4 e7e6 b1c3 f8b4|Tượng b4 ghim Mã c3 — quân giữ ô e4. Đen chơi bằng quân chứ không bằng tốt.|The b4 bishop pins the c3 knight, the piece guarding e4. Black plays with pieces, not pawns.
+E12|Phòng thủ Hậu Ấn|Queen's Indian Defence|d2d4 g8f6 c2c4 e7e6 g1f3 b7b6|Đen dựng Tượng b7 nhắm dài vào e4, tranh trung tâm từ xa thay vì chiếm bằng tốt.|Black's b7 bishop eyes e4 from afar, fighting for the centre at long range instead of occupying it.
+A40|Phòng thủ Ấn Độ cũ|Old Indian Defence|d2d4 g8f6 c2c4 d7d6|Đen dựng Mã và tốt d6 kiểu cũ, chậm hơn Ấn Độ Vua nhưng dễ hiểu hơn nhiều.|Black sets up knights and d6 in the old way — slower than the King's Indian but much easier to grasp.
+A45|Ván cờ Ấn Độ|Indian Game|d2d4 g8f6|Đen ra Mã f6 trước, chưa nói gì về kế hoạch. Cửa vào của cả họ khai cuộc Ấn Độ.|Black plays Nf6 first and commits to nothing yet. The doorway into the whole Indian family.
+A80|Phòng thủ Hà Lan|Dutch Defence|d2d4 f7f5|Đen chiếm ô e4 bằng tốt f, đánh cánh Vua — đổi lại Vua mình hở ngay từ đầu.|Black grabs e4 with the f-pawn and plays for a kingside attack, at the cost of an airy king.
+A10|Khai cuộc Anh|English Opening|c2c4|Trắng đánh vào d5 từ bên cạnh, giữ thế cờ mềm dẻo và tránh mọi kho lý thuyết lớn.|White attacks d5 from the side, keeping things flexible and avoiding every big theory file.
+A15|Anh, biến Ấn Độ|English, Anglo-Indian|c2c4 g8f6 g1f3 g7g6|Trắng để Đen ra Mã trước rồi mới chọn hình thế — cùng ý tưởng, đổi thứ tự nước.|White lets Black commit first, then picks a setup — same idea, different move order.
+A04|Khai cuộc Réti|Réti Opening|g1f3 d7d5 c2c4|Trắng ra Mã f3 trước, chưa đẩy tốt trung tâm nào. Thế cờ thành gì là do Đen quyết.|White develops Nf3 without pushing a central pawn. What the game becomes is Black's choice.
+A01|Khai cuộc Larsen|Larsen Opening|b2b3|Trắng dựng Tượng b2 nhắm chéo dài. Lạ mắt, ít lý thuyết, đối thủ dễ lúng túng.|White fianchettoes on b2 for the long diagonal. Offbeat, low theory, awkward to face.
+A02|Khai cuộc Bird|Bird Opening|f2f4|Trắng đẩy tốt f ngay nước một để chiếm ô e5. Hiếm gặp, nên bên kia thường phải tự nghĩ.|White plays f4 at once to claim e5. Rare enough that the opponent is on their own from move one.
+B06|Phòng thủ Hiện đại|Modern Defence|e2e4 g7g6 d2d4 f8g7|Đen dựng Tượng g7 rồi mới quyết đẩy tốt nào. Rất linh hoạt, nhưng phải biết mình định gì.|Black fianchettoes first and decides on pawns later. Very flexible, if you know what you want.
 # Bo sung 2026-08-15. Hai muc dich: (1) may di sau hon truoc khi phai tu nghi,
 # (2) can lai trong so — nuoc nao nhieu bien di qua thi may boc trung nhieu hon,
 # nen them bien cho khai cuoc pho bien cung la sua cho lech ve khai cuoc hiem.
-C54|Ý, biến chính|Italian, Main Line|e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 c2c3 g8f6 d2d4 e5d4 c3d4 c5b4
-C45|Scotland, biến cổ điển|Scotch, Classical|e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 f8c5
-C29|Viên, gambit|Vienna Gambit|e2e4 e7e5 b1c3 g8f6 f2f4 d7d5
-B33|Sicilia, biến Sveshnikov|Sicilian, Sveshnikov|e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5
-B40|Sicilia, biến Taimanov|Sicilian, Taimanov|e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6
-B90|Sicilia, Najdorf tấn công Anh|Sicilian, Najdorf English Attack|e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1e3 e7e5
-C18|Pháp, biến Winawer|French, Winawer|e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5
-C07|Pháp, biến Tarrasch|French, Tarrasch|e2e4 e7e6 d2d4 d7d5 b1d2 c7c5
-B14|Caro-Kann, tấn công Panov|Caro-Kann, Panov Attack|e2e4 c7c6 d2d4 d7d5 e4d5 c6d5 c2c4 g8f6
-B01|Scandinavia, Hậu về d6|Scandinavian, Queen to d6|e2e4 d7d5 e4d5 d8d5 b1c3 d5d6
-D53|Gambit Hậu từ chối, biến Tượng g5|Queen's Gambit Declined, Bg5|d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 f8e7 e2e3 e8g8
-D85|Grünfeld, biến đổi quân|Grünfeld, Exchange|d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 f8g7
-E92|Ấn Độ Vua, biến cổ điển|King's Indian, Classical|d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5
-E80|Ấn Độ Vua, biến Sämisch|King's Indian, Sämisch|d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 f2f3 e8g8
-E06|Khai cuộc Catalan|Catalan Opening|d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 f8e7
-D02|Hệ thống London|London System|d2d4 d7d5 g1f3 g8f6 c1f4 e7e6 e2e3 f8d6
-A45|Tấn công Trompowsky|Trompowsky Attack|d2d4 g8f6 c1g5 e7e6
-A57|Gambit Benko|Benko Gambit|d2d4 g8f6 c2c4 c7c5 d4d5 b7b5
-A60|Phòng thủ Benoni hiện đại|Modern Benoni|d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6
-A81|Hà Lan, biến Leningrad|Dutch, Leningrad|d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7
-A34|Anh, biến đối xứng|English, Symmetrical|c2c4 c7c5 g1f3 g8f6 b1c3 b8c6
-A05|Réti, tấn công Ấn Độ Vua|Réti, King's Indian Attack|g1f3 g8f6 g2g3 g7g6 f1g2 f8g7
+C54|Ý, biến chính|Italian, Main Line|e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 c2c3 g8f6 d2d4 e5d4 c3d4 c5b4|Trắng đẩy c3 rồi d4 dựng trung tâm to; ván cờ mở toang và nhiều đòn.|White plays c3 and d4 for a big centre; the game opens up and turns tactical.
+C45|Scotland, biến cổ điển|Scotch, Classical|e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 f8c5|Sau khi đổi tốt, Trắng đưa Mã ra giữa bàn. Thoáng, sạch, ít bẫy.|After the trade White centralises the knight. Open, clean, few traps.
+C29|Viên, gambit|Vienna Gambit|e2e4 e7e5 b1c3 g8f6 f2f4 d7d5|Trắng đẩy f4 sớm, mở cột f cho Xe và lao vào tấn công. Kiểu chơi thế kỷ 19.|White plays an early f4 to open the f-file and attack. A 19th-century way to play.
+B33|Sicilia, biến Sveshnikov|Sicilian, Sveshnikov|e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5|Đen chấp nhận một lỗ hổng ở d5 để đổi lấy quân hoạt động và nước e5 chiếm không gian.|Black accepts a hole on d5 in return for active pieces and the space-gaining ...e5.
+B40|Sicilia, biến Taimanov|Sicilian, Taimanov|e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6|Đen chưa vội đẩy d6 hay a6, giữ nhiều hình thế để chọn tuỳ Trắng chơi thế nào.|Black delays ...d6 and ...a6, keeping several setups available depending on White's choice.
+B90|Sicilia, Najdorf tấn công Anh|Sicilian, Najdorf English Attack|e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1e3 e7e5|Trắng đẩy f3 giữ e4 rồi đánh bão tốt g4-h4 vào cánh Vua Đen. Một trong những biến hung hãn nhất.|White holds e4 with f3, then storms in with g4 and h4. One of the fiercest lines there is.
+C18|Pháp, biến Winawer|French, Winawer|e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5|Đen đổi Tượng lấy Mã c3 làm hỏng cấu trúc tốt Trắng, chấp nhận đôi Tượng cho đối thủ.|Black trades the bishop for the c3 knight to wreck White's structure, conceding the bishop pair.
+C07|Pháp, biến Tarrasch|French, Tarrasch|e2e4 e7e6 d2d4 d7d5 b1d2 c7c5|Trắng ra Mã d2 giữ e4 mà không cho ghim. Mềm mỏng hơn, ít sắc bén hơn.|White guards e4 with Nd2 and avoids the pin. Gentler, less sharp.
+B14|Caro-Kann, tấn công Panov|Caro-Kann, Panov Attack|e2e4 c7c6 d2d4 d7d5 e4d5 c6d5 c2c4 g8f6|Trắng dựng tốt cô lập ở d4 để đổi lấy quân hoạt động và tấn công nhanh.|White accepts an isolated d-pawn in exchange for active pieces and quick attacking chances.
+B01|Scandinavia, Hậu về d6|Scandinavian, Queen to d6|e2e4 d7d5 e4d5 d8d5 b1c3 d5d6|Hậu đứng d6 an toàn hơn a5, và Đen dựng thế cờ chắc chắn theo kiểu Caro-Kann.|The queen sits safer on d6 than a5, and Black builds a solid Caro-Kann-like structure.
+D53|Gambit Hậu từ chối, biến Tượng g5|Queen's Gambit Declined, Bg5|d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 f8e7 e2e3 e8g8|Tượng g5 ghim Mã f6 — quân đang giữ d5. Cả ván xoay quanh cái ghim đó.|The g5 bishop pins the f6 knight, which guards d5. The whole game turns on that pin.
+D85|Grünfeld, biến đổi quân|Grünfeld, Exchange|d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 f8g7|Trắng dựng trung tâm to bằng tốt; Đen bắn phá nó bằng c5 và Tượng g7. Rất ăn thua.|White builds a large pawn centre; Black shoots at it with ...c5 and the g7 bishop. Sharp stuff.
+E92|Ấn Độ Vua, biến cổ điển|King's Indian, Classical|d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5|Bàn cờ khoá lại, Trắng đánh cánh Hậu còn Đen đẩy tốt f5-g5 tấn công Vua. Đua tốc độ.|The centre locks, White attacks on the queenside and Black storms with ...f5 and ...g5. A pure race.
+E80|Ấn Độ Vua, biến Sämisch|King's Indian, Sämisch|d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 f2f3 e8g8|Trắng đẩy f3 dựng tường chắc rồi mới tính chuyện tấn công. Chặn đứng phản công của Đen.|White plays f3 for a solid wall before thinking about attack, blunting Black's counterplay.
+E06|Khai cuộc Catalan|Catalan Opening|d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 f8e7|Trắng dựng Tượng g2 nhắm dài xuống cánh Hậu, ép nhẹ mà bền suốt ván.|White's g2 bishop presses down the long diagonal — gentle pressure that lasts all game.
+D02|Hệ thống London|London System|d2d4 d7d5 g1f3 g8f6 c1f4 e7e6 e2e3 f8d6|Một hình thế dựng gần như y hệt bất kể Đen chơi gì. Ít phải học thuộc nhất.|The same setup against almost anything Black plays. The least memorisation of any system.
+A45|Tấn công Trompowsky|Trompowsky Attack|d2d4 g8f6 c1g5 e7e6|Trắng ra Tượng g5 ngay nước hai, ép Đen phải quyết định sớm hơn dự tính.|White plays Bg5 on move two, forcing Black to make decisions earlier than planned.
+A57|Gambit Benko|Benko Gambit|d2d4 g8f6 c2c4 c7c5 d4d5 b7b5|Đen thí tốt để mở hai cột a và b cho Xe. Sức ép kéo dài suốt ván, kể cả trong tàn cuộc.|Black gives a pawn to open the a- and b-files for the rooks. Pressure that lasts into the endgame.
+A60|Phòng thủ Benoni hiện đại|Modern Benoni|d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6|Đen chấp nhận thế cờ mất cân đối, đổi lại có tốt thông cánh Hậu và Tượng g7 rất mạnh.|Black accepts an unbalanced structure for a queenside pawn majority and a strong g7 bishop.
+A81|Hà Lan, biến Leningrad|Dutch, Leningrad|d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7|Đen ghép Hà Lan với Tượng g7: vừa đánh cánh Vua vừa có quân che Vua mình.|Black mixes the Dutch with a g7 bishop: attacking on the kingside while keeping the king covered.
+A34|Anh, biến đối xứng|English, Symmetrical|c2c4 c7c5 g1f3 g8f6 b1c3 b8c6|Hai bên chơi gần như đối xứng; bên nào phá thế đối xứng trước là bên phải cẩn thận.|Both sides mirror each other; whoever breaks the symmetry first is the one who must be careful.
+A05|Réti, tấn công Ấn Độ Vua|Réti, King's Indian Attack|g1f3 g8f6 g2g3 g7g6 f1g2 f8g7|Trắng chơi Ấn Độ Vua nhưng cầm quân Trắng, tức là hơn hẳn một nhịp.|White plays the King's Indian setup with an extra tempo, because White moves first.

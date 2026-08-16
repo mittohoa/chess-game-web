@@ -96,7 +96,7 @@
 <main>
   <div class="wrap">
     <h1>Chính sách quyền riêng tư</h1>
-    <p class="sub">Áp dụng cho app <strong>TỐT thí</strong> (<code>com.mittohoa.chess_game</code>) trên Android và bản chạy trong trình duyệt. Cập nhật lần cuối: 13/08/2026.</p>
+    <p class="sub">Áp dụng cho app <strong>TỐT thí</strong> (<code>com.mittohoa.chess_game</code>) trên Android và bản chạy trong trình duyệt. Cập nhật lần cuối: 16/08/2026.</p>
 
     <div class="callout">
       <p><strong>App không thu thập, không lưu trữ và không truyền đi bất kỳ dữ liệu cá nhân nào.</strong> Không có tài khoản, không có máy chủ riêng.</p>
@@ -127,13 +127,17 @@
     <p>Muốn xoá riêng phần thành tích mà không gỡ app: mở <em>Cài đặt → Thành tích → Xoá</em>.</p>
 
     <h2>3. Quyền hệ thống</h2>
-    <p>App xin <strong>đúng hai quyền</strong>, cả hai chỉ phục vụ việc tự cập nhật:</p>
+    <p>App xin <strong>đúng bốn quyền</strong>, và đây là toàn bộ:</p>
     <table>
       <tr><th>Quyền</th><th>Dùng để làm gì</th></tr>
       <tr><td><code>INTERNET</code></td><td>Hỏi GitHub xem có bản mới không, và tải tệp cài đặt về khi bạn bấm nút</td></tr>
       <tr><td><code>REQUEST_INSTALL_PACKAGES</code></td><td>Mở màn hình cài đặt của Android với tệp vừa tải. Quyền này <em>không</em> cho phép app tự cài — bạn vẫn phải tự bấm nút Cài đặt trên màn hình của hệ thống, và Android còn hỏi bạn một lần nữa trước đó</td></tr>
+      <tr><td><code>POST_NOTIFICATIONS</code></td><td>Hiện <strong>một</strong> thông báo mỗi ngày, đúng giờ bạn chọn, để nhắc giải bài tập. Thêm từ bản 1.20.0. Mặc định <strong>tắt</strong>: app chỉ hỏi quyền này đúng lúc bạn tự bật công tắc trong <em>Cài đặt → Nhắc giải bài mỗi ngày</em>, và tắt công tắc đi là hết</td></tr>
+      <tr><td><code>VIBRATE</code></td><td>Đi kèm phần thông báo ở trên — để thông báo rung theo cách bạn đã đặt cho máy. App không tự rung ngoài lúc đó</td></tr>
     </table>
-    <p>Ngoài hai quyền trên, app <strong>không xin quyền nào truy cập dữ liệu của bạn</strong>: không vị trí, không danh bạ, không bộ nhớ, không camera, không micro.</p>
+    <p>Lời nhắc hằng ngày <strong>không gửi gì ra ngoài</strong>: nó là một lịch hẹn nằm trong máy bạn, do chính máy bạn bắn ra đúng giờ. Không có máy chủ nào biết bạn bật hay tắt nó.</p>
+    <p>Cố ý <strong>không</strong> xin quyền hẹn giờ chính xác (<code>SCHEDULE_EXACT_ALARM</code>): quyền đó dành cho đồng hồ báo thức. Lời nhắc giải cờ lệch vài phút thì không sao, nên app dùng lịch hẹn lỏng và khỏi phải xin thêm.</p>
+    <p>Ngoài bốn quyền trên, app <strong>không xin quyền nào truy cập dữ liệu của bạn</strong>: không vị trí, không danh bạ, không bộ nhớ, không camera, không micro.</p>
     <p>Nói cho thật chính xác: trong bản kê khai còn một mục quyền thứ ba, tên là <code>com.mittohoa.chess_game.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>. Đây là quyền do thư viện giao diện AndroidX <strong>tự sinh ra và tự cấp cho chính app này</strong>, ở mức chữ ký — nghĩa là không app nào khác giữ được nó, và nó không mở ra bất cứ truy cập nào tới máy hay dữ liệu của bạn. Nó tồn tại chỉ để app tự bảo vệ các bộ nhận tin nội bộ của mình khỏi bị ứng dụng khác gửi tin vào.</p>
 
     <h2 id="cap-nhat">4. Kiểm tra bản mới</h2>
@@ -160,7 +164,7 @@
 
     <h2>8. Thay đổi chính sách</h2>
     <p>Nếu về sau app có thêm tính năng cần kết nối mạng (ví dụ chơi trực tuyến), trang này sẽ được cập nhật <strong>trước</strong> khi tính năng đó được phát hành, và ngày cập nhật ở đầu trang sẽ đổi theo.</p>
-    <p>Lần gần nhất điều đó xảy ra là bản <strong>1.6.0</strong>: app thêm phần tự kiểm tra cập nhật, nên mục 3 và mục 4 được viết lại. Trước bản đó app không xin quyền nào và không dùng mạng.</p>
+    <p>Lần gần nhất điều đó xảy ra là bản <strong>1.20.0</strong>: app thêm lời nhắc giải bài hằng ngày, nên mục 3 được viết lại với hai quyền mới. Trước đó là bản <strong>1.6.0</strong>, khi app thêm phần tự kiểm tra cập nhật — và trước bản đó nữa thì app không xin quyền nào và không dùng mạng.</p>
 
     <h2>9. Liên hệ</h2>
     <p>Thắc mắc hoặc khiếu nại về quyền riêng tư: <a href="mailto:mittohoa@gmail.com">mittohoa@gmail.com</a>.</p>

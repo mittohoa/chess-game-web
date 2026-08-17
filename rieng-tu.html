@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chính sách quyền riêng tư — TỐT thí</title>
-<meta name="description" content="Chính sách quyền riêng tư của app cờ vua TỐT thí. App không thu thập dữ liệu nào. Chỉ dùng mạng để kiểm tra bản cập nhật, và tắt được.">
+<meta name="description" content="Chính sách quyền riêng tư của app cờ vua TỐT thí. App không thu thập dữ liệu nào, không tài khoản, không quảng cáo, không máy chủ.">
 <meta name="theme-color" content="#8B5A2B">
 <link rel="icon" href="anh/logo.png" type="image/png">
 <style>
@@ -96,11 +96,12 @@
 <main>
   <div class="wrap">
     <h1>Chính sách quyền riêng tư</h1>
-    <p class="sub">Áp dụng cho app <strong>TỐT thí</strong> (<code>com.mittohoa.chess_game</code>) trên Android và bản chạy trong trình duyệt. Cập nhật lần cuối: 16/08/2026.</p>
+    <p class="sub">Áp dụng cho app <strong>TỐT thí</strong> (<code>com.mittohoa.chess_game</code>) trên Android và bản chạy trong trình duyệt. Cập nhật lần cuối: 17/08/2026.</p>
 
     <div class="callout">
       <p><strong>App không thu thập, không lưu trữ và không truyền đi bất kỳ dữ liệu cá nhân nào.</strong> Không có tài khoản, không có máy chủ riêng.</p>
-      <p>Từ bản 1.6.0 app có <strong>một</strong> việc dùng tới mạng: mỗi ngày một lần hỏi GitHub xem đã có phiên bản mới chưa. Việc này <a href="#cap-nhat">nói rõ ở mục 4</a> và <strong>tắt được</strong> trong Cài đặt.</p>
+      <p><strong>Từ bản 1.23.0</strong>, app phát hành qua Google Play và <strong>bỏ hẳn phần tự cập nhật</strong>. Việc dùng mạng duy nhất còn lại là <a href="#mang">chơi cờ với máy khác trong cùng Wi-Fi</a> — hai máy nói thẳng với nhau, không đi qua máy chủ nào.</p>
+      <p>Bản <strong>1.22.0 trở về trước</strong>, tải thẳng từ trang này, còn có phần tự hỏi GitHub xem đã có bản mới chưa. Phần đó <a href="#cap-nhat">nói rõ ở mục 5</a> và tắt được trong Cài đặt.</p>
     </div>
 
     <h2>1. Dữ liệu chúng tôi thu thập</h2>
@@ -112,7 +113,8 @@
       <li>Không thống kê sử dụng, không báo cáo sự cố tự động, không đo lường hành vi.</li>
       <li>Không cookie, không pixel theo dõi ở bản web.</li>
     </ul>
-    <p>Việc kiểm tra bản mới cũng không gửi gì về chúng tôi — chúng tôi không có máy chủ để nhận. Nhưng nó là một yêu cầu mạng thật, nên <strong>GitHub</strong> nhìn thấy được địa chỉ IP của bạn và phiên bản app, giống như khi bạn mở một trang web bất kỳ. Xem mục 4.</p>
+    <p>Chơi cờ với máy khác trong cùng Wi-Fi cũng không gửi gì về chúng tôi: hai máy nói thẳng với nhau trong mạng nội bộ của bạn, và thứ đi qua đó chỉ là các nước cờ. Xem mục 4.</p>
+    <p>Ở bản 1.22.0 trở về trước, việc kiểm tra bản mới cũng không gửi gì về chúng tôi — chúng tôi không có máy chủ để nhận. Nhưng nó là một yêu cầu mạng thật, nên <strong>GitHub</strong> nhìn thấy được địa chỉ IP của bạn và phiên bản app, giống như khi bạn mở một trang web bất kỳ. Xem mục 5.</p>
 
     <h2>2. Dữ liệu lưu trên máy bạn</h2>
     <p>App có lưu một ít dữ liệu, nhưng lưu <strong>trên chính thiết bị của bạn</strong> và không gửi đi đâu cả:</p>
@@ -126,22 +128,33 @@
     <p>Trên Android, dữ liệu này nằm trong vùng nhớ riêng của app và <strong>bị xoá hoàn toàn khi bạn gỡ app</strong>. Trên bản web, nó nằm trong <code>localStorage</code> của trình duyệt và bị xoá khi bạn xoá dữ liệu trang.</p>
     <p>Muốn xoá riêng phần thành tích mà không gỡ app: mở <em>Cài đặt → Thành tích → Xoá</em>.</p>
 
-    <h2>3. Quyền hệ thống</h2>
-    <p>App xin <strong>đúng bốn quyền</strong>, và đây là toàn bộ:</p>
+    <h2 id="quyen">3. Quyền hệ thống</h2>
+    <p><strong>Từ bản 1.23.0</strong> app xin <strong>đúng ba quyền</strong>, và đây là toàn bộ:</p>
     <table>
       <tr><th>Quyền</th><th>Dùng để làm gì</th></tr>
-      <tr><td><code>INTERNET</code></td><td>Hỏi GitHub xem có bản mới không, và tải tệp cài đặt về khi bạn bấm nút</td></tr>
-      <tr><td><code>REQUEST_INSTALL_PACKAGES</code></td><td>Mở màn hình cài đặt của Android với tệp vừa tải. Quyền này <em>không</em> cho phép app tự cài — bạn vẫn phải tự bấm nút Cài đặt trên màn hình của hệ thống, và Android còn hỏi bạn một lần nữa trước đó</td></tr>
+      <tr><td><code>INTERNET</code></td><td>Chơi cờ với một máy khác <strong>trong cùng mạng Wi-Fi</strong>. Tên quyền nghe to tát hơn thực tế: Android không có quyền nào hẹp hơn cho việc mở một kết nối trong mạng nội bộ. Xem mục 4</td></tr>
       <tr><td><code>POST_NOTIFICATIONS</code></td><td>Hiện <strong>một</strong> thông báo mỗi ngày, đúng giờ bạn chọn, để nhắc giải bài tập. Thêm từ bản 1.20.0. Mặc định <strong>tắt</strong>: app chỉ hỏi quyền này đúng lúc bạn tự bật công tắc trong <em>Cài đặt → Nhắc giải bài mỗi ngày</em>, và tắt công tắc đi là hết</td></tr>
       <tr><td><code>VIBRATE</code></td><td>Đi kèm phần thông báo ở trên — để thông báo rung theo cách bạn đã đặt cho máy. App không tự rung ngoài lúc đó</td></tr>
     </table>
+    <p><strong>Bản 1.22.0 trở về trước</strong> xin thêm một quyền thứ tư, <code>REQUEST_INSTALL_PACKAGES</code>, để mở màn hình cài đặt của Android với tệp cập nhật vừa tải. Quyền đó <em>không</em> cho phép app tự cài — bạn vẫn phải tự bấm nút Cài đặt trên màn hình của hệ thống. Bản 1.23.0 <strong>đã bỏ hẳn</strong> quyền này cùng với phần tự cập nhật, vì Google Play tự lo việc đó.</p>
     <p>Lời nhắc hằng ngày <strong>không gửi gì ra ngoài</strong>: nó là một lịch hẹn nằm trong máy bạn, do chính máy bạn bắn ra đúng giờ. Không có máy chủ nào biết bạn bật hay tắt nó.</p>
     <p>Cố ý <strong>không</strong> xin quyền hẹn giờ chính xác (<code>SCHEDULE_EXACT_ALARM</code>): quyền đó dành cho đồng hồ báo thức. Lời nhắc giải cờ lệch vài phút thì không sao, nên app dùng lịch hẹn lỏng và khỏi phải xin thêm.</p>
-    <p>Ngoài bốn quyền trên, app <strong>không xin quyền nào truy cập dữ liệu của bạn</strong>: không vị trí, không danh bạ, không bộ nhớ, không camera, không micro.</p>
-    <p>Nói cho thật chính xác: trong bản kê khai còn một mục quyền thứ ba, tên là <code>com.mittohoa.chess_game.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>. Đây là quyền do thư viện giao diện AndroidX <strong>tự sinh ra và tự cấp cho chính app này</strong>, ở mức chữ ký — nghĩa là không app nào khác giữ được nó, và nó không mở ra bất cứ truy cập nào tới máy hay dữ liệu của bạn. Nó tồn tại chỉ để app tự bảo vệ các bộ nhận tin nội bộ của mình khỏi bị ứng dụng khác gửi tin vào.</p>
+    <p>Ngoài những quyền trên, app <strong>không xin quyền nào truy cập dữ liệu của bạn</strong>: không vị trí, không danh bạ, không bộ nhớ, không camera, không micro.</p>
+    <p>Nói cho thật chính xác: trong bản kê khai còn một mục nữa, tên là <code>com.mittohoa.chess_game.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>. Đây là quyền do thư viện giao diện AndroidX <strong>tự sinh ra và tự cấp cho chính app này</strong>, ở mức chữ ký — nghĩa là không app nào khác giữ được nó, và nó không mở ra bất cứ truy cập nào tới máy hay dữ liệu của bạn. Nó tồn tại chỉ để app tự bảo vệ các bộ nhận tin nội bộ của mình khỏi bị ứng dụng khác gửi tin vào.</p>
 
-    <h2 id="cap-nhat">4. Kiểm tra bản mới</h2>
-    <p>App chưa có trên Google Play nên không có ai lo việc cập nhật giúp. Vì vậy app tự làm, và đây là <strong>toàn bộ</strong> những gì xảy ra:</p>
+    <h2 id="mang">4. Chơi cùng máy khác trong Wi-Fi</h2>
+    <p>App cho hai máy trong <strong>cùng một mạng Wi-Fi</strong> chơi cờ với nhau. Đây là việc duy nhất bản 1.23.0 dùng tới mạng, và nó hoạt động như sau:</p>
+    <ul>
+      <li>Một máy mở bàn và <strong>chờ</strong>; máy kia dò trong mạng nội bộ rồi nối vào. Hai máy nói thẳng với nhau.</li>
+      <li><strong>Không có máy chủ nào ở giữa.</strong> Chúng tôi không có máy chủ, và không có dữ liệu nào rời khỏi mạng Wi-Fi của bạn.</li>
+      <li>Thứ truyền qua lại chỉ là <strong>các nước cờ</strong> và một cái tên hiển thị cho bàn cờ. Không tài khoản, không đăng nhập, không nhắn tin.</li>
+      <li>Cái tên đó do máy bạn tự bốc, và bạn đổi được trong <em>Cài đặt → Chơi cùng mạng</em>. Nó chỉ hiện cho máy kia trong cùng Wi-Fi thấy.</li>
+      <li>Không mở bàn thì app <strong>không tạo kết nối nào cả</strong>.</li>
+    </ul>
+
+    <h2 id="cap-nhat">5. Kiểm tra bản mới <span style="color:var(--muted);font-weight:400">— chỉ ở bản 1.22.0 trở về trước</span></h2>
+    <p><strong>Bản 1.23.0 trở đi không còn phần này.</strong> App phát hành qua Google Play, và Play lo việc cập nhật; app không hỏi máy chủ nào nữa, và quyền <code>REQUEST_INSTALL_PACKAGES</code> đã được gỡ bỏ.</p>
+    <p>Mục này giữ lại cho những bản tải thẳng từ trang này. Khi đó app chưa có trên Google Play nên không có ai lo việc cập nhật giúp, và đây là <strong>toàn bộ</strong> những gì xảy ra:</p>
     <ol>
       <li>Nhiều nhất <strong>mỗi ngày một lần</strong>, lúc bạn mở app, app gửi một yêu cầu tới <code>api.github.com</code> để hỏi phiên bản mới nhất.</li>
       <li>Yêu cầu đó <strong>không kèm dữ liệu nào của bạn</strong>. Nó chỉ mang tên và phiên bản app (ví dụ <code>TỐT thí/1.6.0</code>) như mọi phần mềm gửi khi truy cập web.</li>
@@ -152,21 +165,22 @@
     <p><strong>Tắt hẳn được:</strong> mở <em>Cài đặt → Cập nhật</em> và tắt công tắc <em>Tự kiểm tra khi mở app</em>. Tắt rồi thì app không tạo bất kỳ kết nối mạng nào nữa, trừ khi bạn tự bấm nút <em>Kiểm tra bản mới</em>.</p>
     <p>Điều chúng tôi <em>không</em> nhận được: bất cứ thứ gì. Chúng tôi không có máy chủ. GitHub là bên lưu tệp phát hành, và họ thấy địa chỉ IP của bạn đúng như khi bạn mở một trang web — <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" rel="noopener">chính sách riêng tư của GitHub</a> áp dụng cho phần đó.</p>
 
-    <h2>5. Bên thứ ba</h2>
+    <h2>6. Bên thứ ba</h2>
     <p>App không nhúng SDK quảng cáo, không nhúng thư viện phân tích, không đăng nhập mạng xã hội, và không có mua bán trong ứng dụng.</p>
     <p>Dữ liệu bài tập chiến thuật được lấy sẵn từ kho mở của <a href="https://database.lichess.org/#puzzles" rel="noopener">Lichess</a> (giấy phép CC0) và <strong>đóng gói kèm trong app</strong> lúc phát hành. App không gọi tới Lichess khi chạy.</p>
 
-    <h2>6. Trẻ em</h2>
+    <h2>7. Trẻ em</h2>
     <p>App phù hợp với mọi lứa tuổi. Vì không thu thập dữ liệu nào, nên cũng không có dữ liệu trẻ em nào được thu thập.</p>
 
-    <h2>7. Chia sẻ ván đấu</h2>
+    <h2>8. Chia sẻ ván đấu</h2>
     <p>App có chức năng sao chép hoặc chia sẻ ván đấu dưới dạng văn bản (PGN/FEN). Việc này chỉ chạy khi <em>bạn chủ động bấm nút</em>, và nội dung đi tới đúng ứng dụng mà bạn chọn trong bảng chia sẻ của hệ điều hành. Chúng tôi không nhận được bản sao nào.</p>
 
-    <h2>8. Thay đổi chính sách</h2>
+    <h2>9. Thay đổi chính sách</h2>
     <p>Nếu về sau app có thêm tính năng cần kết nối mạng (ví dụ chơi trực tuyến), trang này sẽ được cập nhật <strong>trước</strong> khi tính năng đó được phát hành, và ngày cập nhật ở đầu trang sẽ đổi theo.</p>
-    <p>Lần gần nhất điều đó xảy ra là bản <strong>1.20.0</strong>: app thêm lời nhắc giải bài hằng ngày, nên mục 3 được viết lại với hai quyền mới. Trước đó là bản <strong>1.6.0</strong>, khi app thêm phần tự kiểm tra cập nhật — và trước bản đó nữa thì app không xin quyền nào và không dùng mạng.</p>
+    <p>Lần gần nhất là bản <strong>1.23.0</strong>, và lần này là đi theo hướng ngược lại: app chuyển sang phát hành qua Google Play, <strong>bỏ hẳn</strong> phần tự cập nhật cùng quyền <code>REQUEST_INSTALL_PACKAGES</code>. Nhân đó, mục 4 được viết mới để nói rõ phần chơi cùng máy khác trong Wi-Fi — tính năng đó có từ trước nhưng trang này chưa từng mô tả, và đó là thiếu sót của chúng tôi.</p>
+    <p>Trước đó là bản <strong>1.20.0</strong>: app thêm lời nhắc giải bài hằng ngày, nên mục 3 được viết lại với hai quyền mới. Và trước nữa là bản <strong>1.6.0</strong>, khi app thêm phần tự kiểm tra cập nhật — trước bản đó thì app không xin quyền nào và không dùng mạng.</p>
 
-    <h2>9. Liên hệ</h2>
+    <h2>10. Liên hệ</h2>
     <p>Thắc mắc hoặc khiếu nại về quyền riêng tư: <a href="mailto:mittohoa@gmail.com">mittohoa@gmail.com</a>.</p>
   </div>
 </main>
